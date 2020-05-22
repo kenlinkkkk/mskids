@@ -12,10 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('admin.user.info');
+    return view('admin.user.form');
 });
 
 Route::get('/analytic', 'Admin\AnalyticController@index')->name('analytic');
+Route::post('/upload', 'Upload\UploadController@uploadImage')->name('upload');
 
 Auth::routes();
 
