@@ -24,6 +24,7 @@ $(document).ready(function () {
         file_picker_callback: function(cb, value, meta) {
             var input = document.createElement('input');
             input.setAttribute('type', 'file');
+            input.setAttribute('name', 'picture');
             input.setAttribute('accept', 'image/*');
             input.onchange = function() {
                 var file = this.files[0];

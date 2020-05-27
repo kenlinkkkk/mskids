@@ -32,8 +32,10 @@
                         plugin that makes it easy to create simple, beautiful wysiwyg editors
                         with the help of wysihtml5 and Twitter Bootstrap.</p>
 
-                    <form method="post">
+                    <form method="post" action="{{ route('test') }}">
+                        @csrf
                         <textarea id="elm1" name="area"></textarea>
+                        <button type="submit" value="Submit">Submit</button>
                     </form>
 
                 </div>
