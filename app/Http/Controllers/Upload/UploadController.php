@@ -16,8 +16,6 @@ class UploadController extends Controller
 
     public function uploadImage(Request $request)
     {
-        echo public_path('upload');
-        die();
         $data = $request->except('_token');
         if (!empty($data['file'])) {
             $file = $data['file'];
@@ -38,7 +36,6 @@ class UploadController extends Controller
     public function test(Request $request)
     {
         $data = $request->except('_token');
-
         dd($data);
     }
 }

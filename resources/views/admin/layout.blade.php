@@ -10,6 +10,8 @@
     <!-- App favicon -->
     <link rel="shortcut icon" href="{{ asset('assets/admin/images/favicon.ico') }}">
 
+    <link href="{{ asset('assets/admin/libs/sweetalert2/sweetalert2.min.css') }}" rel="stylesheet" type="text/css" />
+
     <!-- Bootstrap Css -->
     <link href="{{ asset('assets/admin/css/bootstrap.min.css') }}" id="bootstrap-style" rel="stylesheet" type="text/css" />
     <!-- Icons Css -->
@@ -39,19 +41,19 @@
                 <div class="navbar-brand-box">
                     <a href="#" class="logo logo-dark">
                         <span class="logo-sm">
-                            <img src="{{ asset('assets/admin/images/logo.svg') }}" alt="" height="22">
+                            <img src="{{ asset('assets/client/images/small-logo.png') }}" alt="" height="30">
                         </span>
                         <span class="logo-lg">
-                            <img src="{{ asset('assets/admin/images/logo-dark.png') }}" alt="" height="17">
+                            <img src="{{ asset('assets/client/images/logo.png') }}" alt="" height="50">
                         </span>
                     </a>
 
                     <a href="#" class="logo logo-light">
                         <span class="logo-sm">
-                            <img src="{{ asset('assets/admin/images/logo-light.svg') }}" alt="" height="22">
+                            <img src="{{ asset('assets/client/images/small-logo.png') }}" alt="" height="30">
                         </span>
                         <span class="logo-lg">
-                            <img src="{{ asset('assets/admin/images/logo-light.png') }}" alt="" height="19">
+                            <img src="{{ asset('assets/client/images/logo.png') }}" alt="" height="50">
                         </span>
                     </a>
                 </div>
@@ -145,11 +147,31 @@
 <script src="{{ asset('assets/admin/libs/simplebar/simplebar.min.js') }}"></script>
 <script src="{{ asset('assets/admin/libs/node-waves/waves.min.js') }}"></script>
 
+<script src="{{ asset('assets/admin/libs/sweetalert2/sweetalert2.min.js') }}"></script>
+
 <!-- apexcharts -->
 <script src="{{ asset('assets/admin/libs/apexcharts/apexcharts.min.js') }}"></script>
 
 <!-- App js -->
 <script src="{{ asset('assets/admin/js/app.js') }}"></script>
+<script>
+    @if (session('success'))
+    swal.fire({
+        type: "success",
+        title: "Cập nhật thành công",
+        showConfirmButton: !1,
+        timer: 1500
+    });
+    @endif
+    @if (session('error'))
+    swal.fire({
+        type: "error",
+        title: "Cập nhật thất bại",
+        showConfirmButton: !1,
+        timer: 1500
+    });
+    @endif
+</script>
 @yield('script')
 </body>
 </html>

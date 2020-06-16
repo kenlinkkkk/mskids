@@ -27,7 +27,7 @@
                             <div class="col-7">
                                 <div class="text-primary p-4">
                                     <h5 class="text-primary">Welcome Back !</h5>
-                                    <p>Sign in to continue.</p>
+                                    <p>Đăng nhập để tiếp tục.</p>
                                 </div>
                             </div>
                             <div class="col-5 align-self-end">
@@ -49,16 +49,16 @@
                             <form class="form-horizontal" action="{{ route('login') }}" method="post" enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-group">
-                                    <label for="username">Username</label>
-                                    <input type="text" class="form-control" id="username" name="username" value="{{ old('username') }}" placeholder="Enter username" required>
+                                    <label for="username">Tài khoản</label>
+                                    <input type="text" class="form-control" id="username" name="username" value="{{ old('username') }}" placeholder="Nhập tài khoản..." required>
                                     @error('username')
                                         <div class="invalid-feedback">Sai thông tin tài khoản</div>
                                     @enderror
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="userpassword">Password</label>
-                                    <input type="password" class="form-control" id="userpassword" name="password" placeholder="Enter password" required>
+                                    <label for="userpassword">Mật khẩu</label>
+                                    <input type="password" class="form-control" id="userpassword" name="password" placeholder="Nhập mật khẩu..." required>
                                     @error('password')
                                     <div class="invalid-feedback">Sai mật khẩu tài khoản</div>
                                     @enderror
@@ -70,21 +70,21 @@
 {{--                                </div>--}}
 
                                 <div class="mt-3">
-                                    <button class="btn btn-primary btn-block waves-effect waves-light" type="submit">Log In</button>
+                                    <button class="btn btn-primary btn-block waves-effect waves-light" type="submit">Đăng nhập</button>
                                 </div>
 
-                                <div class="mt-4 text-center">
-                                    <a href="#" class="text-muted"><i class="mdi mdi-lock mr-1"></i> Forgot your password?</a>
-                                </div>
+{{--                                <div class="mt-4 text-center">--}}
+{{--                                    <a href="#" class="text-muted"><i class="mdi mdi-lock mr-1"></i> Forgot your password?</a>--}}
+{{--                                </div>--}}
                             </form>
                         </div>
 
                     </div>
                 </div>
-                <div class="mt-5 text-center">
-                    <p>Don't have an account ? <a href="#" class="font-weight-medium text-primary"> Signup now </a> </p>
-                    <p>© 2020</p>
-                </div>
+{{--                <div class="mt-5 text-center">--}}
+{{--                    <p>Don't have an account ? <a href="#" class="font-weight-medium text-primary"> Signup now </a> </p>--}}
+{{--                    <p>© 2020</p>--}}
+{{--                </div>--}}
 
             </div>
         </div>

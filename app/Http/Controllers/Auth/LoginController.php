@@ -21,7 +21,9 @@ class LoginController extends Controller
     |
     */
 
-    use AuthenticatesUsers;
+    use AuthenticatesUsers {
+        logout as performLogout;
+    }
 
     /**
      * Where to redirect users after login.
@@ -48,13 +50,18 @@ class LoginController extends Controller
     public function login(LoginRequest $request)
     {
         $data = $request->except('_token');
+
         if (Auth::attempt($data)) {
-            return redirect(route());
+            return redirect(route('admin.category.index'));
         } else {
             $request->session()->flash('login-errors');
             return redirect(route('login'));
         }
     }
 
-
+    public function logout(Request $request)
+    {
+        $this->performLogout($request);
+        return redirect(route('login'));
+    }
 }
