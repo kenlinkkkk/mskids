@@ -20,8 +20,11 @@
                         <span>Quản lý</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
+                        @if (\Illuminate\Support\Facades\Auth::user()->role == 0)
                         <li><a href="{{ route('admin.category.index') }}">Danh mục</a></li>
+                        @endif
                         <li><a href="{{ route('admin.page.index') }}">Trang</a></li>
+
                     </ul>
                 </li>
 

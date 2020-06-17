@@ -36,7 +36,6 @@ class PageController extends Controller
         }
 
 
-
         return view('admin.page.index', $data);
     }
 

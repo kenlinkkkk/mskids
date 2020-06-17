@@ -47,7 +47,7 @@
                                 <td>{{ $page->id }}</td>
                                 <td>{{ $page->name }}</td>
                                 <td>{{ $page->short_tag }}</td>
-                                <td>{{ $page->category->name }}</td>
+                                <td>{{ $page->category == null ? 'Khác' : $page->category->name }}</td>
                                 @if ($page->status == 1)
                                     <td><span class="badge badge-pill badge-soft-success font-size-12">Active</span></td>
                                 @else

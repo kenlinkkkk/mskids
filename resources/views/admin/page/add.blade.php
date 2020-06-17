@@ -27,7 +27,7 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    <form method="post" action="{{ route('admin.page.add') }}">
+                    <form method="post" action="{{ route('admin.page.create') }}">
                         @csrf
                         <div class="form-group">
                             <label>Tên</label>

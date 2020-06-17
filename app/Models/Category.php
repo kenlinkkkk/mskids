@@ -11,4 +11,9 @@ class Category extends Model
     protected $fillable = [
         'name', 'short_tag', 'description', 'status'
     ];
+
+    public function pages()
+    {
+        return $this->hasMany(Page::class);
+    }
 }

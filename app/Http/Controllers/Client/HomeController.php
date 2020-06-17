@@ -3,15 +3,36 @@
 namespace App\Http\Controllers\Client;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
+use App\Repositories\Admin\CategoryEloquentRepository;
+use App\Repositories\Admin\PageEloquentRepository;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Redirect;
 
 class HomeController extends Controller
 {
+    public function __construct(PageEloquentRepository $pageEloquentRepository, CategoryEloquentRepository $categoryEloquentRepository)
+    {
+        $this->categoryEloquentRepository = $categoryEloquentRepository;
+        $this->pageEloquentRepository = $pageEloquentRepository;
+    }
+
     public function index()
     {
         return view('client.content.home');
+    }
+
+    public function viewPage(Request $request, $category_tag)
+    {
+
+        $cates = Category::where('short_tag', '=', $category_tag)->with('pages')->get();
+
+        $data = compact(
+            'cates'
+        );
+
+        dd($data);
     }
 
     public function showHeader(Request $request) {
