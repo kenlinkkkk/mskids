@@ -49,7 +49,7 @@ class HomeController extends Controller
             Log::info('LOG::redirectUrl::session-msisdn: '. session()->get('_user')['msisdn']);
             return Redirect::route('home.index');
         } else {
-            session()->put('_user', ['msisdn' => aes128Decrypt('km12tXwuXaJ8Hagh', $content)]);
+            session()->put('_user', ['msisdn' => aes128Decrypt('GuUgo9rJiCROAYc8', $content)]);
             Log::info('LOG::redirectUrl::session-msisdn: '. session()->get('_user')['msisdn']);
             return Redirect::route('home.index');
         }
