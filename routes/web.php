@@ -61,6 +61,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::middleware('checksub')->group(function () {
     Route::prefix('/')->name('home.')->group(function () {
         Route::get('/', 'Client\HomeController@index')->name('index');
+        Route::post('/reg', 'Client\HomeController@regPackage')->name('reg');
         Route::get('/{categoy_tag}/', 'Client\HomeController@viewPage')->name('viewPage');
         Route::get('/test', function (){
             return view('admin.user.form');

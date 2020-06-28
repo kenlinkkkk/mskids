@@ -138,9 +138,23 @@
                                                 <li>Thời gian sử dụng: 1 tháng</li>
                                             </ul>
                                         </div>
-                                        <div class="table-footer">
-                                            <a href="#" class="theme-btn-two">Đăng ký ngay</a>
-                                        </div>
+                                        @if(session()->get('_user')['msisdn'] != 'empty')
+                                            @if($package['code'] == 1)
+                                                @if ($package['data']['packageCode'] == 'S3')
+                                                    <a href="#" class="theme-btn-two disabled">Gói đang sử dụng</a>
+                                                @else
+                                                    <a href="#" class="theme-btn-two disabled">Không thể đăng ký gói</a>
+                                                @endif
+                                            @else
+                                                <div class="table-footer">
+                                                    <form action="{{ route('home.reg') }}" method="post">
+                                                        @csrf
+                                                        <input type="hidden" name="package" value="S3">
+                                                        <button type="submit" class="theme-btn-two">Đăng ký ngay</button>
+                                                    </form>
+                                                </div>
+                                            @endif
+                                        @endif
                                     </div>
                                 </div>
                             </div>
@@ -159,9 +173,23 @@
                                                 <li>Thời gian sử dụng: 1 tháng</li>
                                             </ul>
                                         </div>
-                                        <div class="table-footer">
-                                            <a href="#" class="theme-btn-two">Đăng ký ngay</a>
-                                        </div>
+                                        @if(session()->get('_user')['msisdn'] != 'empty')
+                                            @if($package['code'] == 1)
+                                                @if ($package['data']['packageCode'] == 'S5')
+                                                    <a href="#" class="theme-btn-two disabled">Gói đang sử dụng</a>
+                                                @else
+                                                    <a href="#" class="theme-btn-two disabled">Không thể đăng ký gói</a>
+                                                @endif
+                                            @else
+                                                <div class="table-footer">
+                                                    <form action="{{ route('home.reg') }}" method="post">
+                                                        @csrf
+                                                        <input type="hidden" name="package" value="S5">
+                                                        <button type="submit" class="theme-btn-two">Đăng ký ngay</button>
+                                                    </form>
+                                                </div>
+                                            @endif
+                                        @endif
                                     </div>
                                 </div>
                             </div>
@@ -184,9 +212,23 @@
                                                 <li>Thời gian sử dụng: 1 năm</li>
                                             </ul>
                                         </div>
-                                        <div class="table-footer">
-                                            <a href="#" class="theme-btn-two">Đăng ký ngay</a>
-                                        </div>
+                                        @if(session()->get('_user')['msisdn'] != 'empty')
+                                            @if($package['code'] == 1)
+                                                @if ($package['data']['packageCode'] == 'M3')
+                                                    <a href="#" class="theme-btn-two disabled">Gói đang sử dụng</a>
+                                                @else
+                                                    <a href="#" class="theme-btn-two disabled">Không thể đăng ký gói</a>
+                                                @endif
+                                            @else
+                                                <div class="table-footer">
+                                                    <form action="{{ route('home.reg') }}" method="post">
+                                                        @csrf
+                                                        <input type="hidden" name="package" value="M3">
+                                                        <button type="submit" class="theme-btn-two">Đăng ký ngay</button>
+                                                    </form>
+                                                </div>
+                                            @endif
+                                        @endif
                                     </div>
                                 </div>
                             </div>
@@ -205,9 +247,23 @@
                                                 <li>Thời gian sử dụng: 1 năm</li>
                                             </ul>
                                         </div>
-                                        <div class="table-footer">
-                                            <a href="#" class="theme-btn-two">Đăng ký ngay</a>
-                                        </div>
+                                        @if(session()->get('_user')['msisdn'] != 'empty')
+                                            @if($package['code'] == 1)
+                                                @if ($package['data']['packageCode'] == 'M5')
+                                                    <a href="#" class="theme-btn-two disabled">Gói đang sử dụng</a>
+                                                @else
+                                                    <a href="#" class="theme-btn-two disabled">Không thể đăng ký gói</a>
+                                                @endif
+                                            @else
+                                                <div class="table-footer">
+                                                    <form action="{{ route('home.reg') }}" method="post">
+                                                        @csrf
+                                                        <input type="hidden" name="package" value="M5">
+                                                        <button type="submit" class="theme-btn-two">Đăng ký ngay</button>
+                                                    </form>
+                                                </div>
+                                            @endif
+                                        @endif
                                     </div>
                                 </div>
                             </div>

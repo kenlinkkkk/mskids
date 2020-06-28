@@ -15,6 +15,9 @@
                     <nav class="main-menu navbar-expand-md navbar-light">
                         <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                             <ul class="navigation clearfix">
+                                @if (session()->get('_user')['msisdn'] != 'empty')
+                                    <li><a href="#" class="disable">Xin chào: 0{{ substr(substr(session()->get('_user')['msisdn'], -9),0 , 5) }}xxxx</a></li>
+                                @endif
                                 <li><a href="{{ route('home.index') }}">Trang chủ</a></li>
                                 <li><a href="#gioithieu">Giới thiệu</a></li>
                                 <li><a href="#goidichvu">Gói dịch vụ</a></li>
