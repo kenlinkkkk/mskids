@@ -22,7 +22,7 @@
         <div class="pattern-bg" style="background-image: url({{ asset('assets/client/images/icons/vactor-1.png') }});"></div>
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-md-12 col-sm-12 content-column">
+                <div class="col-md-6 col-sm-6 content-column">
                     <div class="content-box text-justify">
                         <h1>Safe Kids</h1>
                         <div class="text">Dịch vụ giám sát trẻ em MobiFone Safe Kids.</div>
@@ -30,7 +30,7 @@
                         <div class="btn-box"><a href="#">Tải app ngay</a></div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-12 col-sm-12 image-column">
+                <div class="col-md-6 col-sm-6 image-column">
                     <div class="image-box float-bob-y clearfix">
                         <figure class="image image-1 wow fadeInUp" data-wow-delay="900ms" data-wow-duration="1500ms"><img src="{{ asset('assets/client/images/resource/phone-1.png') }}" alt=""></figure>
                     </div>
@@ -60,42 +60,42 @@
                             </div>
                             <div class="inner-box wow fadeInUp text-justify" data-wow-delay="00ms" data-wow-duration="1500ms">
                                 <div class="row">
-                                    <div class="col-lg-6 col-md-6 col-sm-12 single-column">
+                                    <div class="col-lg-6 col-md-10 col-sm-12 m-auto single-column">
                                         <div class="single-item">
                                             <div class="bg-layer" style="background-image: url('{{ asset('assets/client/images/resource/case-4.png') }}');"></div>
                                             <h5><a href="#">Tổng quan</a></h5>
                                             <div class="text">Tổng quan về thời gian, thói quen và nội dung tìm kiếm, sử dụng Internet của đối tượng bị quản lý</div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-12 single-column">
+                                    <div class="col-lg-6 col-md-10 col-sm-12 m-auto single-column">
                                         <div class="single-item wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
                                             <div class="bg-layer" style="background-image: url('{{ asset('assets/client/images/resource/case-4.png') }}');"></div>
                                             <h5><a href="#">Chi tiết</a></h5>
                                             <div class="text">Theo dõi chi tiết thời gian, khung giờ sử dụng web/app và bảo vệ khỏi các trang web độc hại.</div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-12 single-column">
+                                    <div class="col-lg-6 col-md-10 col-sm-12 m-auto single-column">
                                         <div class="single-item wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
                                             <div class="bg-layer" style="background-image: url('{{ asset('assets/client/images/resource/case-4.png') }}');"></div>
                                             <h5><a href="#">Lên lịch và giới hạn</a></h5>
                                             <div class="text">Cho phép bạn thiết lập các giới hạn sử dụng thiết bị hàng ngày và thời gian có thể sử dụng để lướt web trên Internet.</div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-12 single-column">
+                                    <div class="col-lg-6 col-md-10 col-sm-12 m-auto single-column">
                                         <div class="single-item wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
                                             <div class="bg-layer" style="background-image: url('{{ asset('assets/client/images/resource/case-4.png') }}');"></div>
                                             <h5><a href="#">Định vị</a></h5>
                                             <div class="text">Định vị thiết bị di động theo thời gian thực. Đảm bảo luôn biết vị trí của con bất kỳ thời điểm nào trong ngày.</div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-12 single-column">
+                                    <div class="col-lg-6 col-md-10 col-sm-12 m-auto single-column">
                                         <div class="single-item wow fadeInUp" data-wow-delay="800ms" data-wow-duration="1500ms">
                                             <div class="bg-layer" style="background-image: url('{{ asset('assets/client/images/resource/case-4.png') }}');"></div>
                                             <h5><a href="#">Bộ lọc web</a></h5>
                                             <div class="text">Bộ lọc Internet trong ứng dụng sẽ quét nội dung của trang web mà bạn sắp truy cập trong thời gian thực.</div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-12 single-column">
+                                    <div class="col-lg-6 col-md-10 col-sm-12 m-auto single-column">
                                         <div class="single-item wow fadeInUp" data-wow-delay="1000ms" data-wow-duration="1500ms">
                                             <div class="bg-layer" style="background-image: url('{{ asset('assets/client/images/resource/case-4.png') }}');"></div>
                                             <h5><a href="#">Khóa và cảnh báo</a></h5>
@@ -287,7 +287,7 @@
         <div class="bg-layer wow slideInLeft animated" style="background-image: url('{{ asset('assets/client/images/icons/shap-3.png') }}');"></div>
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-md-12 col-sm-12 content-column">
+                <div class="col-lg-6 col-md-6 col-sm-6 content-column">
                     <div id="content_block_05">
                         <div class="content-box wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
                             <div class="sec-title"><h2>Tải ứng dụng ngay!</h2></div>
@@ -307,7 +307,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-12 col-sm-12 image-column">
+                <div class="col-lg-6 col-md-6 col-sm-6 image-column">
                     <div id="iamge_block_04">
                         <div class="image-box">
                             <figure class="image image-1 wow slideInUp" data-wow-delay="300ms" data-wow-duration="1500ms"><img src="{{ asset('assets/client/images/resource/phone-4.png') }}" alt=""></figure>

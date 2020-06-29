@@ -13,7 +13,8 @@
     <link href="{{ asset('assets/client/css/font-awesome-all.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/client/css/flaticon.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/client/css/owl.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/client/css/bootstrap.css') }}" rel="stylesheet">
+{{--    <link href="{{ asset('assets/client/css/bootstrap.css') }}" rel="stylesheet">--}}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link href="{{ asset('assets/client/css/jquery.fancybox.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/client/css/animate.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/client/css/imagebg.css') }}" rel="stylesheet">

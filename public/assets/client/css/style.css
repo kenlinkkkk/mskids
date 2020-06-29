@@ -1057,7 +1057,7 @@ img {
   display: block;
   line-height: 24px;
   padding: 10px 25px;
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 500;
   color: #ffffff;
   text-transform: uppercase;
@@ -21037,4 +21037,3 @@ div#mCSB_1_container{
 .feature-style-three.elements{
   padding: 200px 0px 300px 0px;
 }
-
