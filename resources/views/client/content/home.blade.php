@@ -4,321 +4,192 @@
 @endsection
 
 @section('content')
-    <!-- Mobile Menu  -->
-    <div class="mobile-menu">
-        <div class="menu-backdrop"></div>
-        <div class="close-btn"><i class="fas fa-times"></i></div>
-
-        <nav class="menu-box">
-            <div class="nav-logo"><a href="{{ route('home.index') }}"><img src="{{ asset('assets/client/images/logo.png') }}" alt="" title=""></a></div>
-            <div class="menu-outer"></div>
-        </nav>
-    </div><!-- End Mobile Menu -->
-
-
-    <!-- banner-section -->
-    <section class="banner-section">
-        <div class="bg-layer" style="background-image: url('{{ asset('assets/client/images/icons/banner-1.png') }}');"></div>
-        <div class="pattern-bg" style="background-image: url({{ asset('assets/client/images/icons/vactor-1.png') }});"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-sm-6 content-column">
-                    <div class="content-box text-justify">
-                        <h1>Safe Kids</h1>
-                        <div class="text">Dịch vụ giám sát trẻ em MobiFone Safe Kids.</div>
-                        <div class="text">Ứng dụng giúp phụ huynh giúp định vị, quản lý giới hạn các ứng dụng và website có thể truy nhập, quản lý thời gian truy nhập và cho phép gọi khẩn cấp khi cần thiết.</div>
-                        <div class="btn-box"><a href="#">Tải app ngay</a></div>
+    <section id="hero-3" class="bg-scroll hero-section division">
+        <div class=container>
+            <div class="row d-flex align-items-center">
+                <div class="col-md-6 col-lg-5">
+                    <div class="hero-txt mb-40 white-color">
+                        <h2 class=txt-500>Safe Kids</h2>
+                        <p class=p-md>Dịch vụ giám sát trẻ em  Mobifone Safe Kids</p>
+                        <p class=p-md>Ứng dụng giúp phụ huynh giúp định vi, quản lý giới hạn các ứng dụng và website  có thể truy cập, quản lý thòi gian truy cập và cho phép gọi khẩn cấp khi cần thiết</p>
+                        <div class=stores-badge>
+                            <a href=# class=store>
+                                <img class=appstore-original src="{{ asset('assets/client/images/store_badges/appstore.png') }}" alt=appstore-logo/>
+                            </a>
+                            <a href=# class=store>
+                                <img class=googleplay-original src={{ asset('assets/client/images/store_badges/googleplay.png') }} alt=googleplay-logo/>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-sm-6 image-column">
-                    <div class="image-box float-bob-y clearfix">
-                        <figure class="image image-1 wow fadeInUp" data-wow-delay="900ms" data-wow-duration="1500ms"><img src="{{ asset('assets/client/images/resource/phone-1.png') }}" alt=""></figure>
+                <div class="col-md-6 col-lg-7">
+                    <div class="hero-3-img text-center">
+                        <img class=img-fluid src="{{ asset('assets/client/images/hero-3-img.png') }}" alt=hero-image>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="bg-fixed hero-3-wave"></div>
     </section>
-    <!-- banner-section end -->
 
-
-    <!-- feature-section -->
-    <section class="feature-section" id="gioithieu">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5 col-md-12 col-sm-12 image-column">
-                    <div id="iamge_block_01">
-                        <div class="image-box float-bob-y">
-                            <figure class="image wow slideInLeft" data-wow-delay="00ms" data-wow-duration="1500ms"><img src="{{ asset('assets/client/images/resource/phone-3.png') }}" alt=""></figure>
+    <section id=services-4 class="wide-50 services-section division">
+        <div class=container>
+            <div class=row>
+                <div class="col-lg-10 offset-lg-1 section-title">
+                    <h3 class=h3-md>Tính năng nổi bật</h3>
+                </div>
+            </div>
+            <div class=row>
+                <div class="col-sm-6 col-md-4">
+                    <div class="sbox-4 wow fadeInUp" data-wow-delay=0.2s>
+                        <img class=img-65 src="{{ asset('assets/client/images/icons/communication.png') }}" alt=service-icon/>
+                        <div class=sbox-4-txt>
+                            <h5 class=h5-sm>Tổng quan</h5>
+                            <p>Tổng quan về thời gian, thói quen và nội dung tìm kiếm, sử dụng Internet của đối tượng được quản lý.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-7 col-md-12 col-sm-12 content-column">
-                    <div id="content_block_01">
-                        <div class="content-box">
-                            <div class="sec-title">
-                                <h2>Tính năng nổi bật</h2>
-                            </div>
-                            <div class="inner-box wow fadeInUp text-justify" data-wow-delay="00ms" data-wow-duration="1500ms">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-10 col-sm-12 m-auto single-column">
-                                        <div class="single-item">
-                                            <div class="bg-layer" style="background-image: url('{{ asset('assets/client/images/resource/case-4.png') }}');"></div>
-                                            <h5><a href="#">Tổng quan</a></h5>
-                                            <div class="text">Tổng quan về thời gian, thói quen và nội dung tìm kiếm, sử dụng Internet của đối tượng bị quản lý</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-10 col-sm-12 m-auto single-column">
-                                        <div class="single-item wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
-                                            <div class="bg-layer" style="background-image: url('{{ asset('assets/client/images/resource/case-4.png') }}');"></div>
-                                            <h5><a href="#">Chi tiết</a></h5>
-                                            <div class="text">Theo dõi chi tiết thời gian, khung giờ sử dụng web/app và bảo vệ khỏi các trang web độc hại.</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-10 col-sm-12 m-auto single-column">
-                                        <div class="single-item wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
-                                            <div class="bg-layer" style="background-image: url('{{ asset('assets/client/images/resource/case-4.png') }}');"></div>
-                                            <h5><a href="#">Lên lịch và giới hạn</a></h5>
-                                            <div class="text">Cho phép bạn thiết lập các giới hạn sử dụng thiết bị hàng ngày và thời gian có thể sử dụng để lướt web trên Internet.</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-10 col-sm-12 m-auto single-column">
-                                        <div class="single-item wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
-                                            <div class="bg-layer" style="background-image: url('{{ asset('assets/client/images/resource/case-4.png') }}');"></div>
-                                            <h5><a href="#">Định vị</a></h5>
-                                            <div class="text">Định vị thiết bị di động theo thời gian thực. Đảm bảo luôn biết vị trí của con bất kỳ thời điểm nào trong ngày.</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-10 col-sm-12 m-auto single-column">
-                                        <div class="single-item wow fadeInUp" data-wow-delay="800ms" data-wow-duration="1500ms">
-                                            <div class="bg-layer" style="background-image: url('{{ asset('assets/client/images/resource/case-4.png') }}');"></div>
-                                            <h5><a href="#">Bộ lọc web</a></h5>
-                                            <div class="text">Bộ lọc Internet trong ứng dụng sẽ quét nội dung của trang web mà bạn sắp truy cập trong thời gian thực.</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-10 col-sm-12 m-auto single-column">
-                                        <div class="single-item wow fadeInUp" data-wow-delay="1000ms" data-wow-duration="1500ms">
-                                            <div class="bg-layer" style="background-image: url('{{ asset('assets/client/images/resource/case-4.png') }}');"></div>
-                                            <h5><a href="#">Khóa và cảnh báo</a></h5>
-                                            <div class="text">Khóa kết nối mạng hoặc khóa toàn bộ thiết bị không cho trẻ sử dụng. Cảnh báo đến người quản trị. </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="sbox-4 wow fadeInUp" data-wow-delay=0.4s>
+                        <img class=img-65 src="{{ asset('assets/client/images/icons/smartphone-1.png') }}" alt=service-icon/>
+                        <div class=sbox-4-txt>
+                            <h5 class=h5-sm>Chi tiết</h5>
+                            <p>Theo dõi thời gian, khung giờ sử dụng web/app và bảo vệ khỏi các trang web độc hại.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="sbox-4 wow fadeInUp" data-wow-delay=0.6s>
+                        <img class=img-65 src="{{ asset('assets/client/images/icons/calendar-1.png') }}" alt=service-icon/>
+                        <div class=sbox-4-txt>
+                            <h5 class=h5-sm>Lên lịch và giới hạn</h5>
+                            <p>Cho phép bạn thiết lập các giới hạn sử dụng thiết bị hằng ngày và thời gian có thể sử dụng để lướt web trên Internet</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="sbox-4 wow fadeInUp" data-wow-delay=0.8s>
+                        <img class=img-65 src="{{ asset('assets/client/images/icons/notification.png') }}" alt=service-icon/>
+                        <div class=sbox-4-txt>
+                            <h5 class=h5-sm>Định vị</h5>
+                            <p>Định vị thiết bị di động theo thời gian thực. Đảm bảo luôn biết vị trí của con bất kỳ thời điểm nào.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="sbox-4 wow fadeInUp" data-wow-delay=1s>
+                        <img class=img-65 src="{{ asset('assets/client/images/icons/smartphone-3.png') }}" alt=service-icon/>
+                        <div class=sbox-4-txt>
+                            <h5 class=h5-sm>Bộ lọc web</h5>
+                            <p>Bộ lọc Internet trong ứng dụng sẽ quét nội dung của trang web mà bạn sắp truy cập trong thời gian thực.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="sbox-4 wow fadeInUp" data-wow-delay=1.2s>
+                        <img class=img-65 src="{{ asset('assets/client/images/icons/key-1.png') }}" alt=service-icon/>
+                        <div class=sbox-4-txt>
+                            <h5 class=h5-sm>Khóa và cảnh báo</h5>
+                            <p>Khóa kết nối mạng hoặc khóa toàn bộ thiết bị không cho trẻ sử dụng. Cảnh báo đến người quản trị.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- feature-section -->
 
-    <!-- pricing-section -->
-    <section class="pricing-section centred" id="goidichvu">
-        <div class="container">
-            <div class="sec-title center">
-                <h2>GÓI DỊCH VỤ</h2>
-{{--                <p>We provide best price plan for our customer check the list now<br />and slect now plan.</p>--}}
-            </div>
-            <div class="tabs-box">
-                <div class="tabs-content">
-                    <div class="tab active-tab" id="tab-1">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-12 pricing-column">
-                                <div class="pricing-block-one">
-                                    <div class="pricing-table">
-                                        <figure class="image"><img src="{{ asset('assets/client/images/icons/price-icon-1.png') }}" alt=""></figure>
-                                        <div class="table-header">
-                                            <h1 class="title">S3</h1>
-                                            <h2 class="price">30.000<span>/Tháng</span></h2>
-                                        </div>
-                                        <div class="table-content">
-                                            <ul>
-                                                <li>Sử dụng cho 3 thiết bị</li>
-                                                <li>Miễn phí 7 ngày đầu</li>
-                                                <li>Thời gian sử dụng: 1 tháng</li>
-                                            </ul>
-                                        </div>
-                                        @if(session()->get('_user')['msisdn'] != 'empty')
-                                            @if($package['code'] == 1)
-                                                @if ($package['data']['packageCode'] == 'S3')
-                                                    <a href="#" class="theme-btn-two disabled">Gói đang sử dụng</a>
-                                                @else
-                                                    <a href="#" class="theme-btn-two disabled">Không thể đăng ký gói</a>
-                                                @endif
-                                            @else
-                                                <div class="table-footer">
-                                                    <form action="{{ route('home.reg') }}" method="post">
-                                                        @csrf
-                                                        <input type="hidden" name="package" value="S3">
-                                                        <button type="submit" class="theme-btn-two">Đăng ký ngay</button>
-                                                    </form>
-                                                </div>
-                                            @endif
-                                        @endif
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-12 pricing-column">
-                                <div class="pricing-block-one">
-                                    <div class="pricing-table">
-                                        <figure class="image"><img src="{{ asset('assets/client/images/icons/price-icon-2.png') }}" alt=""></figure>
-                                        <div class="table-header">
-                                            <h1 class="title">S5</h1>
-                                            <h2 class="price">40.000<span>/Tháng</span></h2>
-                                        </div>
-                                        <div class="table-content">
-                                            <ul>
-                                                <li>Sử dụng cho 5 thiết bị</li>
-                                                <li>Miễn phí 7 ngày đầu</li>
-                                                <li>Thời gian sử dụng: 1 tháng</li>
-                                            </ul>
-                                        </div>
-                                        @if(session()->get('_user')['msisdn'] != 'empty')
-                                            @if($package['code'] == 1)
-                                                @if ($package['data']['packageCode'] == 'S5')
-                                                    <a href="#" class="theme-btn-two disabled">Gói đang sử dụng</a>
-                                                @else
-                                                    <a href="#" class="theme-btn-two disabled">Không thể đăng ký gói</a>
-                                                @endif
-                                            @else
-                                                <div class="table-footer">
-                                                    <form action="{{ route('home.reg') }}" method="post">
-                                                        @csrf
-                                                        <input type="hidden" name="package" value="S5">
-                                                        <button type="submit" class="theme-btn-two">Đăng ký ngay</button>
-                                                    </form>
-                                                </div>
-                                            @endif
-                                        @endif
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab" id="tab-2">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-12 pricing-column">
-                                <div class="pricing-block-one">
-                                    <div class="pricing-table">
-                                        <figure class="image"><img src="{{ asset('assets/client/images/icons/price-icon-1.png') }}" alt=""></figure>
-                                        <div class="table-header">
-                                            <h1 class="title">M3</h1>
-                                            <h2 class="price">300.000<span>/Năm</span></h2>
-                                        </div>
-                                        <div class="table-content">
-                                            <ul>
-                                                <li>Sử dụng cho 3 thiết bị</li>
-                                                <li>Miễn phí 7 ngày đầu</li>
-                                                <li>Thời gian sử dụng: 1 năm</li>
-                                            </ul>
-                                        </div>
-                                        @if(session()->get('_user')['msisdn'] != 'empty')
-                                            @if($package['code'] == 1)
-                                                @if ($package['data']['packageCode'] == 'M3')
-                                                    <a href="#" class="theme-btn-two disabled">Gói đang sử dụng</a>
-                                                @else
-                                                    <a href="#" class="theme-btn-two disabled">Không thể đăng ký gói</a>
-                                                @endif
-                                            @else
-                                                <div class="table-footer">
-                                                    <form action="{{ route('home.reg') }}" method="post">
-                                                        @csrf
-                                                        <input type="hidden" name="package" value="M3">
-                                                        <button type="submit" class="theme-btn-two">Đăng ký ngay</button>
-                                                    </form>
-                                                </div>
-                                            @endif
-                                        @endif
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-12 pricing-column">
-                                <div class="pricing-block-one">
-                                    <div class="pricing-table">
-                                        <figure class="image"><img src="{{ asset('assets/client/images/icons/price-icon-2.png') }}" alt=""></figure>
-                                        <div class="table-header">
-                                            <h1 class="title">M5</h1>
-                                            <h2 class="price">400.000<span>/Năm</span></h2>
-                                        </div>
-                                        <div class="table-content">
-                                            <ul>
-                                                <li>Sử dụng cho 3 thiết bị</li>
-                                                <li>Miễn phí 7 ngày đầu</li>
-                                                <li>Thời gian sử dụng: 1 năm</li>
-                                            </ul>
-                                        </div>
-                                        @if(session()->get('_user')['msisdn'] != 'empty')
-                                            @if($package['code'] == 1)
-                                                @if ($package['data']['packageCode'] == 'M5')
-                                                    <a href="#" class="theme-btn-two disabled">Gói đang sử dụng</a>
-                                                @else
-                                                    <a href="#" class="theme-btn-two disabled">Không thể đăng ký gói</a>
-                                                @endif
-                                            @else
-                                                <div class="table-footer">
-                                                    <form action="{{ route('home.reg') }}" method="post">
-                                                        @csrf
-                                                        <input type="hidden" name="package" value="M5">
-                                                        <button type="submit" class="theme-btn-two">Đăng ký ngay</button>
-                                                    </form>
-                                                </div>
-                                            @endif
-                                        @endif
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="tab-btn-box">
-                    <ul class="tab-btns tab-buttons clearfix">
-                        <li class="tab-btn active-btn" data-tab="#tab-1">Tháng</li>
-                        <li class="tab-btn" data-tab="#tab-2">Năm</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- pricing-section end -->
+{{--    <section id=content-3 class="bg-lightgrey wide-60 content-section division">--}}
+{{--        <div class=container>--}}
+{{--            <div class="row d-flex align-items-center">--}}
+{{--                <div class=col-md-6>--}}
+{{--                    <div class="txt-block pc-30 wow fadeInUp" data-wow-delay=0.4s>--}}
+{{--                        <div id=list-tab class="list-group primary-theme" role=tablist>--}}
+{{--                            <a id=tab1-list class="list-group-item list-group-item-action active" data-toggle=list--}}
+{{--                               href=#tab-1 role=tab aria-controls=tab-1>--}}
+{{--                                <div class=cbox-4>--}}
+{{--                                    <h5 class=h5-sm>Feature Integration</h5>--}}
+{{--                                    <p>Semper lacus cursus porta, feugiat primis in luctus ultrice tellus potenti neque--}}
+{{--                                        dolor in primis congue--}}
+{{--                                    </p>--}}
+{{--                                </div>--}}
+{{--                            </a>--}}
+{{--                            <a id=tab2-list class="list-group-item list-group-item-action" data-toggle=list href=#tab-2--}}
+{{--                               role=tab aria-controls=tab-2>--}}
+{{--                                <div class=cbox-4>--}}
+{{--                                    <h5 class=h5-sm>Comments and Mentions</h5>--}}
+{{--                                    <p>Lacus cursus porta,feugiat primis congue magna purus at pretium ligula rutrum--}}
+{{--                                        luctus and ultrice tellus--}}
+{{--                                    </p>--}}
+{{--                                </div>--}}
+{{--                            </a>--}}
+{{--                            <a id=tab3-list class="list-group-item list-group-item-action" data-toggle=list href=#tab-3--}}
+{{--                               role=tab aria-controls=tab-3>--}}
+{{--                                <div class=cbox-4>--}}
+{{--                                    <h5 class=h5-sm>Elegant User Interface</h5>--}}
+{{--                                    <p>Luctus congue magna at pretium purus pretium ligula rutrum neque incidunt tempor--}}
+{{--                                        laoreet ipsum rhoncus, tempor posuere ligula varius donec purus feugiat--}}
+{{--                                    </p>--}}
+{{--                                </div>--}}
+{{--                            </a>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class=col-md-6>--}}
+{{--                    <div class="img-block pr-30 wow fadeInUp" data-wow-delay=0.6s>--}}
+{{--                        <div id=nav-tabContent class=tab-content>--}}
+{{--                            <div id=tab-1 class="tab-pane show active" role=tabpanel aria-labelledby=tab1-list>--}}
+{{--                                <img class=img-fluid src="{{ asset('assets/client/images/tab-1-img.png') }}" alt=tab-image/>--}}
+{{--                            </div>--}}
+{{--                            <div id=tab-2 class=tab-pane role=tabpanel aria-labelledby=tab2-list>--}}
+{{--                                <div class="video-preview text-center">--}}
+{{--                                    <a class=video-popup2 href="https://www.youtube.com/watch?v=7e90gBu4pas">--}}
+{{--                                        <div class="video-btn play-icon-pink">--}}
+{{--                                            <div class=video-block-wrapper>--}}
+{{--                                                <i class="fas fa-play"></i>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                        <img class=img-fluid src="{{ asset('assets/client/images/tab-2-img.png') }}" alt=video-preview>--}}
+{{--                                    </a>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div id=tab-3 class=tab-pane role=tabpanel aria-labelledby=tab3-list>--}}
+{{--                                <img class=img-fluid src="{{ asset('assets/client/images/tab-3-img.png') }}" alt=tab-image/>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </section>--}}
 
 
-    <!-- download-section -->
-    <section class="download-section">
-        <div class="bg-layer wow slideInLeft animated" style="background-image: url('{{ asset('assets/client/images/icons/shap-3.png') }}');"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-6 content-column">
-                    <div id="content_block_05">
-                        <div class="content-box wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
-                            <div class="sec-title"><h2>Tải ứng dụng ngay!</h2></div>
-                            <div class="text">Have you ever heard the expression,<br />“Do not count your chickens before they hatch?”  Maybe an older, wiser individual</div>
-                            <div class="download-btn">
-                                <a href="#" class="app-store-btn">
-                                    <i class="fab fa-apple"></i>
-                                    <span>Download on the</span>
-                                    App Store
+    <section id=cta-3 class=cta-section>
+        <div class="blue-textured cta-3-content division">
+            <div class="container white-color">
+                <div class="row d-flex align-items-center">
+                    <div class=col-md-6>
+                        <div class="cta-txt pc-45">
+                            <h3 class=h3-lg>Bảo vệ con trẻ với  Safe Kids</h3>
+                            <p class=p-md></p>
+                            <div class=stores-badge>
+                                <a href=# class=store>
+                                    <img class=appstore-white src="{{ asset('assets/client/images/store_badges/appstore-tra-white.png') }}" alt=appstore-logo>
                                 </a>
-                                <a href="#" class="google-play-btn">
-                                    <i class="fab fa-android"></i>
-                                    <span>Get on it</span>
-                                    Google Play
+                                <a href=# class=store>
+                                    <img class=googleplay-white src="{{ asset('assets/client/images/store_badges/googleplay-tra-white.png') }}" alt=googleplay-logo>
                                 </a>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-6 image-column">
-                    <div id="iamge_block_04">
-                        <div class="image-box">
-                            <figure class="image image-1 wow slideInUp" data-wow-delay="300ms" data-wow-duration="1500ms"><img src="{{ asset('assets/client/images/resource/phone-4.png') }}" alt=""></figure>
-                            <figure class="image image-2 wow slideInUp" data-wow-delay="600ms" data-wow-duration="1500ms"><img src="{{ asset('assets/client/images/resource/phone-5.png') }}" alt=""></figure>
+                    <div class=col-md-6>
+                        <div class="cta-3-img text-center pr-45">
+                            <img class=img-fluid src="{{ asset('assets/client/images/cta-3-img.png') }}" alt=cta-image>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- download-section end -->
 @endsection
 
 @section('script')

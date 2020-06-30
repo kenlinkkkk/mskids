@@ -32,6 +32,11 @@ class HomeController extends Controller
         return view('client.content.home', $data);
     }
 
+    public function showRegPage()
+    {
+        return view('client.content.package');
+    }
+
     public function viewPage(Request $request, $category_tag)
     {
 

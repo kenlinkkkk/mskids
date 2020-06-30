@@ -1,43 +1,24 @@
-<header class="main-header home-1">
-    <div class="outer-container">
-        <div class="container">
-            <div class="main-box clearfix">
-                <div class="logo-box pull-left">
-                    <figure class="logo"><a href="#"><img src="{{ asset('assets/client/images/logo.png') }}" alt=""></a></figure>
-                </div>
-                <div class="menu-area pull-right">
-                    <!--Mobile Navigation Toggler-->
-                    <div class="mobile-nav-toggler">
-                        <i class="icon-bar"></i>
-                        <i class="icon-bar"></i>
-                        <i class="icon-bar"></i>
-                    </div>
-                    <nav class="main-menu navbar-expand-md navbar-light">
-                        <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
-                            <ul class="navigation clearfix">
-                                @if (session()->get('_user')['msisdn'] != 'empty')
-                                    <li><a href="#" class="disable">Xin chào: 0{{ substr(substr(session()->get('_user')['msisdn'], -9),0 , 5) }}xxxx</a></li>
-                                @endif
-                                <li><a href="{{ route('home.index') }}">Trang chủ</a></li>
-                                <li><a href="#gioithieu">Giới thiệu</a></li>
-                                <li><a href="#goidichvu">Gói dịch vụ</a></li>
-                                <li><a href="#aboutme">Về chúng tôi</a></li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
+<header id=header class=header>
+    <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-tra hover-menu">
+        <div class=container>
+            <button class="navbar-toggler navbar-left" type=button data-toggle=collapse data-target=#navbarSupportedContent aria-controls=navbarSupportedContent aria-expanded=false aria-label="Toggle navigation">
+                <span class=navbar-bar-icon><i class="fas fa-bars"></i></span>
+            </button>
+            <a href="{{ route('home.index') }}" class="navbar-brand logo-black"><img src="{{ asset('assets/client/images/logo-sk.png') }}" width="150" alt=header-logo></a>
+            <a href="{{ route('home.index') }}" class="navbar-brand logo-white"><img src="{{ asset('assets/client/images/logo-sk.png') }}" width="150" alt=header-logo></a>
+            <div id=navbarSupportedContent class="collapse navbar-collapse">
+                <ul class="navbar-nav">
+                    @if (session()->get('_user')['msisdn'] != 'empty')
+                        <li class="nav-item nl-simple"><a href="#" class="nav-link text-left">Xin chào: 0{{ substr(substr(session()->get('_user')['msisdn'], -9),0 , 5) }}xxxx</a></li>
+                    @endif
+                    <li class="nav-item nl-simple"><a class="nav-link text-left" href="{{ route('home.index') }}">Trang chủ</a></li>
+                    <li class="nav-item nl-simple"><a class="nav-link text-left" href="#hero-3">Giới thiệu</a></li>
+                    <li class="nav-item nl-simple"><a class="nav-link text-left" href="#footer-2">Về chúng tôi</a></li>
+                </ul>
+                <span class="navbar-text white-color">
+                    <a href="{{ route('home.regPage') }}" class="btn btn-tra-white primary-color-hover">Đăng ký ngay</a>
+                </span>
             </div>
         </div>
-    </div>
-
-    <!--sticky Header-->
-    <div class="sticky-header">
-        <div class="container clearfix">
-            <figure class="logo-box"><a href="#"><img src="{{ asset('assets/client/images/logo.png') }}" alt=""></a></figure>
-            <div class="menu-area">
-                <nav class="main-menu clearfix">
-                </nav>
-            </div>
-        </div>
-    </div>
+    </nav>
 </header>
