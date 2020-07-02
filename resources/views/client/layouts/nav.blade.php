@@ -14,6 +14,7 @@
                     <li class="nav-item nl-simple"><a class="nav-link text-left" href="{{ route('home.index') }}">Trang chủ</a></li>
                     <li class="nav-item nl-simple"><a class="nav-link text-left" href="#hero-3">Giới thiệu</a></li>
                     <li class="nav-item nl-simple"><a class="nav-link text-left" href="#footer-2">Về chúng tôi</a></li>
+                    <li class="nav-item nl-simple"><a class="nav-link text-left" href="{{ route('home.viewPage', ['chuong-trinh-khuyen-mai']) }}">Chương trình khuyến mại</a></li>
                 </ul>
                 <span class="navbar-text white-color">
                     <a href="{{ route('home.regPage') }}" class="btn btn-tra-white primary-color-hover">Đăng ký ngay</a>

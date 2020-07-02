@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Client;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Models\Page;
 use App\Repositories\Admin\CategoryEloquentRepository;
 use App\Repositories\Admin\PageEloquentRepository;
 use Illuminate\Http\Request;
@@ -37,16 +38,15 @@ class HomeController extends Controller
         return view('client.content.package');
     }
 
-    public function viewPage(Request $request, $category_tag)
+    public function viewPage(Request $request, $page)
     {
-
-        $cates = Category::where('short_tag', '=', $category_tag)->with('pages')->get();
+        $page = Page::where('short_tag', '=', $page)->first();
 
         $data = compact(
-            'cates'
+            'page'
         );
 
-        dd($data);
+        return view('client.content.page', $data);
     }
 
     public function showHeader(Request $request) {

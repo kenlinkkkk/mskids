@@ -28,8 +28,11 @@
         </div>
         <div class=bottom-footer>
             <div class=row>
-                <div class=col-md-12>
+                <div class=col-md-8>
                     <p class=footer-copyright>&copy; 2020 <span>Safe Kids</span>. All Rights Reserved</p>
+                </div>
+                <div class="col-md-4">
+                    <a href="{{ route('home.viewPage', ['chinh-sach']) }}">Chính sách</a>
                 </div>
             </div>
         </div>

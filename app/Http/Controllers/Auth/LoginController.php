@@ -52,7 +52,7 @@ class LoginController extends Controller
         $data = $request->except('_token');
 
         if (Auth::attempt($data)) {
-            return redirect(route('admin.category.index'));
+            return redirect(route('admin.profile'));
         } else {
             $request->session()->flash('login-errors');
             return redirect(route('login'));

@@ -19,14 +19,6 @@
     <!-- App Css-->
     <link href="{{ asset('assets/admin/css/app.min.css') }}" id="app-style" rel="stylesheet" type="text/css" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154803173-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-154803173-1');
-    </script>
 </head>
 
 <body data-sidebar="dark">
@@ -41,19 +33,19 @@
                 <div class="navbar-brand-box">
                     <a href="#" class="logo logo-dark">
                         <span class="logo-sm">
-                            <img src="{{ asset('assets/client/images/small-logo.png') }}" alt="" height="30">
+                            <img src="{{ asset('assets/client/images/logo-sk-sm.png') }}" alt="" height="30">
                         </span>
                         <span class="logo-lg">
-                            <img src="{{ asset('assets/client/images/logo.png') }}" alt="" height="50">
+                            <img src="{{ asset('assets/client/images/logo-sk.png') }}" alt="" height="50">
                         </span>
                     </a>
 
                     <a href="#" class="logo logo-light">
                         <span class="logo-sm">
-                            <img src="{{ asset('assets/client/images/small-logo.png') }}" alt="" height="30">
+                            <img src="{{ asset('assets/client/images/logo-sk-sm.png') }}" alt="" height="30">
                         </span>
                         <span class="logo-lg">
-                            <img src="{{ asset('assets/client/images/logo.png') }}" alt="" height="50">
+                            <img src="{{ asset('assets/client/images/logo-sk.png') }}" alt="" height="50">
                         </span>
                     </a>
                 </div>

@@ -35,7 +35,7 @@
                         </div>
                         <div class="form-group">
                             <label>Short tag</label>
-                            <input type="text" class="form-control" name="short_tag" value="{{ $page->short_tag }}">
+                            <input type="text" class="form-control" name="short_tag" value="{{ $page->short_tag }}" readonly disabled>
                         </div>
                         <div class="form-group">
                             <label>Danh mục</label>
