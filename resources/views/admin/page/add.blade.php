@@ -37,15 +37,25 @@
                             <label>Short tag</label>
                             <input type="text" class="form-control" name="short_tag">
                         </div>
-                        <div class="form-group">
-                            <label>Danh mục</label>
-                            <select name="category_id" class="custom-select">
-                                <option value="0">Khác</option>
-                                @foreach($categories as $category)
-                                    <option value="{{ $category->id }}">{{ $category->name }}</option>
-                                @endforeach
-                            </select>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label>Danh mục</label>
+                                <select name="category_id" class="custom-select">
+                                    <option value="0">Khác</option>
+                                    @foreach($categories as $category)
+                                        <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label>Vị trí hiển thị</label>
+                                <select name="position" class="custom-select">
+                                    <option value="1">Navbar</option>
+                                    <option value="2">Footer</option>
+                                </select>
+                            </div>
                         </div>
+
                         <textarea id="elm1" name="content"></textarea>
 
                         <div class="form-group d-flex justify-content-end">

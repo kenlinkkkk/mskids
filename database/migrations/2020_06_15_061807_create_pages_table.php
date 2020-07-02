@@ -18,7 +18,8 @@ class CreatePagesTable extends Migration
             $table->string('name');
             $table->string('short_tag');
             $table->integer('category_id');
-            $table->text('content');
+            $table->text('content')->nullable();
+            $table->integer('position')->nullable();
             $table->integer('status')->default(1);
             $table->timestamps();
         });
