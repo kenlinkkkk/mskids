@@ -41,7 +41,7 @@
                             <div class="form-group col-md-6">
                                 <label>Danh mục</label>
                                 <select name="category_id" class="custom-select">
-                                    <option value="0">Khác</option>
+                                    <option value="0">Trang mới</option>
                                     @foreach($categories as $category)
                                         <option value="{{ $category->id }}">{{ $category->name }}</option>
                                     @endforeach

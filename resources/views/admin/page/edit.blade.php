@@ -37,14 +37,23 @@
                             <label>Short tag</label>
                             <input type="text" class="form-control" name="short_tag" value="{{ $page->short_tag }}" readonly disabled>
                         </div>
-                        <div class="form-group">
-                            <label>Danh mục</label>
-                            <select name="category_id" class="custom-select">
-                                <option value="0" {{ $page->category_id == 0? 'selected' : '' }}>Khác</option>
-                                @foreach($categories as $category)
-                                    <option value="{{ $category->id }}" {{ $page->category_id == $category->id? 'selected' : '' }} >{{ $category->name }}</option>
-                                @endforeach
-                            </select>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label>Danh mục</label>
+                                <select name="category_id" class="custom-select">
+                                    <option value="0" {{ $page->category_id == 0? 'selected' : '' }}>Trang mới</option>
+                                    @foreach($categories as $category)
+                                        <option value="{{ $category->id }}" {{ $page->category_id == $category->id? 'selected' : '' }} >{{ $category->name }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label>Vị trí hiển thị</label>
+                                <select name="position" class="custom-select">
+                                    <option value="1" {{ $page->position == 1? 'selected' : '' }}>Navbar</option>
+                                    <option value="2" {{ $page->position == 2? 'selected' : '' }}>Footer</option>
+                                </select>
+                            </div>
                         </div>
                         <textarea id="elm1" name="content">{!! $page->content !!}</textarea>
 

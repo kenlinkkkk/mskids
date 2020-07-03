@@ -28,11 +28,15 @@
         </div>
         <div class=bottom-footer>
             <div class=row>
-                <div class=col-md-8>
+                <div class="col-md-8 col-sm-12">
                     <p class=footer-copyright>&copy; 2020 <span>Safe Kids</span>. All Rights Reserved</p>
                 </div>
-                <div class="col-md-4">
-                    <a href="{{ route('home.viewPage', ['chinh-sach']) }}">Chính sách</a>
+                <div class="col-md-4 col-sm-12">
+                    @if ($footer_item->count() > 0)
+                        @foreach($footer_item as $item)
+                            <a class="nav-link text-left" href="{{ route('home.viewPage', [$item->short_tag]) }}">{{ $item->name }}</a>
+                        @endforeach
+                    @endif
                 </div>
             </div>
         </div>

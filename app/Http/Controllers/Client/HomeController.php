@@ -16,6 +16,7 @@ class HomeController extends Controller
     const MOBIFONE_KEY = 'GuUgo9rJiCROAYc8';
     const MOBIFONE_CONFIRM = 'http://free.mobifone.vn/confirm';
     const SP = '9337';
+
     public function __construct(PageEloquentRepository $pageEloquentRepository, CategoryEloquentRepository $categoryEloquentRepository)
     {
         $this->categoryEloquentRepository = $categoryEloquentRepository;
@@ -24,10 +25,14 @@ class HomeController extends Controller
 
     public function index()
     {
+        $nav_item = Page::where('position', '=', 1)->where('status', '=', 1)->get();
+        $footer_item = Page::where('position', '=', 2)->where('status', '=', 1)->get();
         $package = $this->checkSub('private');
 
         $data = compact(
-            'package'
+            'package',
+            'nav_item',
+            'footer_item'
         );
 
         return view('client.content.home', $data);
@@ -41,9 +46,13 @@ class HomeController extends Controller
     public function viewPage(Request $request, $page)
     {
         $page = Page::where('short_tag', '=', $page)->first();
+        $nav_item = Page::where('position', '=', 1)->where('status', '=', 1)->get();
+        $footer_item = Page::where('position', '=', 2)->where('status', '=', 1)->get();
 
         $data = compact(
-            'page'
+            'page',
+            'nav_item',
+            'footer_item'
         );
 
         return view('client.content.page', $data);
