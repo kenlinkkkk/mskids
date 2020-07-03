@@ -18,13 +18,7 @@
 
     <section class="wide-60 pricing-page-section" id=pricing-2>
         <div class=container>
-            <div class=tab-content>
-                <div aria-labelledby=tab1-list class="tab-pane fade show active" id=price-tab-1 role=tabpanel>
-                    <div class="row d-flex align-items-center pricing-row primary-theme">
-                        {!! $page->content !!}
-                    </div>
-                </div>
-            </div>
+            {!! $page->content !!}
         </div>
     </section>
 @endsection

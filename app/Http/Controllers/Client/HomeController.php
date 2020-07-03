@@ -40,7 +40,15 @@ class HomeController extends Controller
 
     public function showRegPage()
     {
-        return view('client.content.package');
+        $nav_item = Page::where('position', '=', 1)->where('status', '=', 1)->get();
+        $footer_item = Page::where('position', '=', 2)->where('status', '=', 1)->get();
+
+        $data = compact(
+            'nav_item',
+            'footer_item'
+        );
+
+        return view('client.content.package',$data);
     }
 
     public function viewPage(Request $request, $page)
