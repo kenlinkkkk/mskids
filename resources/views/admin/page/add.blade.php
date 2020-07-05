@@ -27,7 +27,7 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    <form method="post" action="{{ route('admin.page.create') }}">
+                    <form method="post" action="{{ route('admin.page.create') }}" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
                             <label>Tên</label>
@@ -36,6 +36,13 @@
                         <div class="form-group">
                             <label>Short tag</label>
                             <input type="text" class="form-control" name="short_tag">
+                        </div>
+                        <div class="form-group">
+                            <label>Ảnh nền header</label>
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="customFile" name="picture">
+                                <label class="custom-file-label" for="customFile">Choose file</label>
+                            </div>
                         </div>
                         <div class="row">
                             <div class="form-group col-md-6">

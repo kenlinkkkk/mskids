@@ -9,7 +9,7 @@ class Page extends Model
     protected $table = 'pages';
 
     protected $fillable = [
-        'name', 'short_tag', 'category_id', 'content', 'status', 'position'
+        'name', 'short_tag', 'category_id', 'content', 'status', 'position', 'picture'
     ];
 
     public function category()
