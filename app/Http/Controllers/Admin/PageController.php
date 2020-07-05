@@ -70,6 +70,16 @@ class PageController extends Controller
             $data['short_tag'] = sluggify($data['name']);
         }
 
+        if ($request->hasFile('picture')) {
+            $picture = $request->picture;
+            $filePath = 'uploads/home';
+            $filePath = str_replace('\\', '/', $filePath);
+
+            $picture_name = $picture->getClientOriginalName();
+            $picture->move($filePath, $picture_name);
+            $data['picture'] = $filePath.'/'.$picture_name;
+        }
+
         try {
             $result = $this->pageEloquentRepository->create($data);
 
@@ -88,6 +98,17 @@ class PageController extends Controller
     public function update(Request $request, $page_id)
     {
         $data = $request->except('_token');
+
+        if ($request->hasFile('picture')) {
+            $picture = $request->picture;
+            $filePath = 'uploads/home';
+            $filePath = str_replace('\\', '/', $filePath);
+
+            $picture_name = $picture->getClientOriginalName();
+            $picture->move($filePath, $picture_name);
+            $data['picture'] = $filePath.'/'.$picture_name;
+        }
+
         try {
             $result = $this->pageEloquentRepository->update($page_id, $data);
 

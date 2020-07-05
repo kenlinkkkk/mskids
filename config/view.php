@@ -33,4 +33,7 @@ return [
         realpath(storage_path('framework/views'))
     ),
 
+    'top_banner' => env('TOP_BANNER_BACKGROUND'),
+    'top_screenshot' => env('TOP_SCREEN_SHOT'),
+    'app_content' => env('APP_CONTENT_PICTURE')
 ];

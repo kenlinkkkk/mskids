@@ -24,7 +24,7 @@
                 </div>
                 <div class="col-md-6 col-lg-7">
                     <div class="hero-3-img text-center">
-                        <img class=img-fluid src="{{ asset('assets/client/images/hero-3-img.png') }}" alt=hero-image>
+                        <img class=img-fluid src="{{ asset(config('view.top_screenshot')) }}" alt=hero-image>
                     </div>
                 </div>
             </div>
@@ -98,71 +98,6 @@
         </div>
     </section>
 
-{{--    <section id=content-3 class="bg-lightgrey wide-60 content-section division">--}}
-{{--        <div class=container>--}}
-{{--            <div class="row d-flex align-items-center">--}}
-{{--                <div class=col-md-6>--}}
-{{--                    <div class="txt-block pc-30 wow fadeInUp" data-wow-delay=0.4s>--}}
-{{--                        <div id=list-tab class="list-group primary-theme" role=tablist>--}}
-{{--                            <a id=tab1-list class="list-group-item list-group-item-action active" data-toggle=list--}}
-{{--                               href=#tab-1 role=tab aria-controls=tab-1>--}}
-{{--                                <div class=cbox-4>--}}
-{{--                                    <h5 class=h5-sm>Feature Integration</h5>--}}
-{{--                                    <p>Semper lacus cursus porta, feugiat primis in luctus ultrice tellus potenti neque--}}
-{{--                                        dolor in primis congue--}}
-{{--                                    </p>--}}
-{{--                                </div>--}}
-{{--                            </a>--}}
-{{--                            <a id=tab2-list class="list-group-item list-group-item-action" data-toggle=list href=#tab-2--}}
-{{--                               role=tab aria-controls=tab-2>--}}
-{{--                                <div class=cbox-4>--}}
-{{--                                    <h5 class=h5-sm>Comments and Mentions</h5>--}}
-{{--                                    <p>Lacus cursus porta,feugiat primis congue magna purus at pretium ligula rutrum--}}
-{{--                                        luctus and ultrice tellus--}}
-{{--                                    </p>--}}
-{{--                                </div>--}}
-{{--                            </a>--}}
-{{--                            <a id=tab3-list class="list-group-item list-group-item-action" data-toggle=list href=#tab-3--}}
-{{--                               role=tab aria-controls=tab-3>--}}
-{{--                                <div class=cbox-4>--}}
-{{--                                    <h5 class=h5-sm>Elegant User Interface</h5>--}}
-{{--                                    <p>Luctus congue magna at pretium purus pretium ligula rutrum neque incidunt tempor--}}
-{{--                                        laoreet ipsum rhoncus, tempor posuere ligula varius donec purus feugiat--}}
-{{--                                    </p>--}}
-{{--                                </div>--}}
-{{--                            </a>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--                <div class=col-md-6>--}}
-{{--                    <div class="img-block pr-30 wow fadeInUp" data-wow-delay=0.6s>--}}
-{{--                        <div id=nav-tabContent class=tab-content>--}}
-{{--                            <div id=tab-1 class="tab-pane show active" role=tabpanel aria-labelledby=tab1-list>--}}
-{{--                                <img class=img-fluid src="{{ asset('assets/client/images/tab-1-img.png') }}" alt=tab-image/>--}}
-{{--                            </div>--}}
-{{--                            <div id=tab-2 class=tab-pane role=tabpanel aria-labelledby=tab2-list>--}}
-{{--                                <div class="video-preview text-center">--}}
-{{--                                    <a class=video-popup2 href="https://www.youtube.com/watch?v=7e90gBu4pas">--}}
-{{--                                        <div class="video-btn play-icon-pink">--}}
-{{--                                            <div class=video-block-wrapper>--}}
-{{--                                                <i class="fas fa-play"></i>--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-{{--                                        <img class=img-fluid src="{{ asset('assets/client/images/tab-2-img.png') }}" alt=video-preview>--}}
-{{--                                    </a>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                            <div id=tab-3 class=tab-pane role=tabpanel aria-labelledby=tab3-list>--}}
-{{--                                <img class=img-fluid src="{{ asset('assets/client/images/tab-3-img.png') }}" alt=tab-image/>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </section>--}}
-
-
     <section id=cta-3 class=cta-section>
         <div class="blue-textured cta-3-content division">
             <div class="container white-color">
@@ -183,7 +118,7 @@
                     </div>
                     <div class=col-md-6>
                         <div class="cta-3-img text-center pr-45">
-                            <img class=img-fluid src="{{ asset('assets/client/images/cta-3-img.png') }}" alt=cta-image>
+                            <img class=img-fluid src="{{ asset(config('view.app_content')) }}" alt=cta-image>
                         </div>
                     </div>
                 </div>
