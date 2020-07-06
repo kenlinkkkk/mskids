@@ -80,10 +80,14 @@
 @section('script')
     <!--tinymce js-->
     <script src="{{ asset('assets/admin/libs/tinymce/tinymce.min.js') }}"></script>
+    <script src="{{ asset('assets/admin/libs/bs-custom-file-input/bs-custom-file-input.min.js') }}"></script>
 
     <!-- Summernote js -->
     {{--    <script src="{{ asset('assets/admin/libs/summernote/summernote-bs4.min.js') }}"></script>--}}
 
     <!-- init js -->
     <script src="{{ asset('assets/admin/js/pages/form-editor.init.js') }}"></script>
+    <script>
+        bsCustomFileInput.init();
+    </script>
 @endsection
