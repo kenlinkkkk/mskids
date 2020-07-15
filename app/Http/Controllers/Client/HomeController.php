@@ -40,10 +40,12 @@ class HomeController extends Controller
 
     public function showRegPage()
     {
+        $package = $this->checkSub('private');
         $nav_item = Page::where('position', '=', 1)->where('status', '=', 1)->get();
         $footer_item = Page::where('position', '=', 2)->where('status', '=', 1)->get();
 
         $data = compact(
+            'package',
             'nav_item',
             'footer_item'
         );
@@ -68,6 +70,20 @@ class HomeController extends Controller
 
     public function showHeader(Request $request) {
         dd($request->header());
+    }
+
+    public function viewErrorPage()
+    {
+        $nav_item = Page::where('position', '=', 1)->where('status', '=', 1)->get();
+        $footer_item = Page::where('position', '=', 2)->where('status', '=', 1)->get();
+
+        $data = compact(
+            'page',
+            'nav_item',
+            'footer_item'
+        );
+
+        return view('client.content.404', $data);
     }
 
     public function redirectUrl(Request $request)

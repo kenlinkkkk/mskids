@@ -8,12 +8,15 @@
 <!--[if (gte IE 9)|!(IE)]><!-->
 <html lang=en>
 
+<!-- Mirrored from dsathemes.com/html/shiftkey/files/404.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2020 03:58:46 GMT -->
 <head>
     <meta charset=utf-8>
     <meta http-equiv=X-UA-Compatible content="IE=edge"/>
+    <meta name=author content="MsKids"/>
+    <meta name=description content="MsKids - Protect your kids"/>
+    <meta name=keywords content="App">
     <meta name=viewport content="width=device-width, initial-scale=1.0"/>
-    @yield('title')
-
+    <title>Opp!</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel=stylesheet>
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,400,500,700,900" rel=stylesheet>
     <link href="{{ asset('assets/client/css/bootstrap.min.css') }}" rel=stylesheet>
@@ -29,17 +32,27 @@
 <body>
 <div id=loader-wrapper>
     <div id=loader>
-        <span class=cssload-loader>
-        <span class=cssload-loader-inner></span>
-        </span>
+<span class=cssload-loader>
+<span class=cssload-loader-inner></span>
+</span>
     </div>
 </div>
 <div id=page class=page>
-    @include('client.layouts.nav')
-
-    @yield('content')
-
-    @include('client.layouts.footer')
+    <section id=page-404 class="bg-darkblue hero-section division" style="height: 100vh;">
+        <div class="container white-color">
+            <div class=row>
+                <div class="col-md-10 offset-md-1">
+                    <div class="404-txt text-center">
+                        <div class=error-404-img>
+                            <img class=img-fluid src="{{ asset('assets/client/images/error-404.png') }}" alt=error-404-img>
+                        </div>
+                        <h2>Không tìm thấy trang!!</h2>
+                        <a href="{{ route('home.index') }}" class="btn btn-tra-white primary-color-hover">Trở về trang chủ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
 <script src="{{ asset('assets/client/js/jquery-3.3.1.min.js') }}"></script>
 <script src="{{ asset('assets/client/js/jquery-migrate-3.0.0.min.js') }}"></script>
@@ -69,9 +82,5 @@
 <![endif] -->
 <script src="{{ asset('assets/client/js/changer.js') }}"></script>
 <script defer src="{{ asset('assets/client/js/styleswitch.js') }}"></script>
-
-@yield('script')
 </body>
-
-<!-- Mirrored from dsathemes.com/html/shiftkey/files/demo-3.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2020 03:58:07 GMT -->
 </html>

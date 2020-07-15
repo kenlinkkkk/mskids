@@ -34,7 +34,7 @@
                 <div class="col-md-4 col-sm-12">
                     @if ($footer_item->count() > 0)
                         @foreach($footer_item as $item)
-                            <a class="nav-link text-left" href="{{ route('home.viewPage', [$item->short_tag]) }}">{{ $item->name }}</a>
+                            <a class="nav-link text-left" href="{{ route('viewPage', [$item->short_tag]) }}">{{ $item->name }}</a>
                         @endforeach
                     @endif
                 </div>

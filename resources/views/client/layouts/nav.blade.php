@@ -16,7 +16,7 @@
                     <li class="nav-item nl-simple"><a class="nav-link text-left" href="#footer-2">Về chúng tôi</a></li>
                     @if ($nav_item->count() > 0)
                         @foreach($nav_item as $item)
-                                <li class="nav-item nl-simple"><a class="nav-link text-left" href="{{ route('home.viewPage', [$item->short_tag]) }}">{{ $item->name }}</a></li>
+                                <li class="nav-item nl-simple"><a class="nav-link text-left" href="{{ route('viewPage', [$item->short_tag]) }}">{{ $item->name }}</a></li>
                         @endforeach
                     @endif
                 </ul>
