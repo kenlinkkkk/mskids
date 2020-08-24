@@ -16,7 +16,7 @@
                             <a href=# class=store>
                                 <img class=appstore-original src="{{ asset('assets/client/images/store_badges/appstore.png') }}" alt=appstore-logo/>
                             </a>
-                            <a href=# class=store>
+                            <a href="https://play.google.com/store/apps/details?id=com.mskids.me" class=store>
                                 <img class=googleplay-original src={{ asset('assets/client/images/store_badges/googleplay.png') }} alt=googleplay-logo/>
                             </a>
                         </div>
@@ -254,7 +254,7 @@
                                 <a href=# class=store>
                                     <img class=appstore-white src="{{ asset('assets/client/images/store_badges/appstore-tra-white.png') }}" alt=appstore-logo>
                                 </a>
-                                <a href=# class=store>
+                                <a href="https://play.google.com/store/apps/details?id=com.mskids.me" class=store>
                                     <img class=googleplay-white src="{{ asset('assets/client/images/store_badges/googleplay-tra-white.png') }}" alt=googleplay-logo>
                                 </a>
                             </div>
