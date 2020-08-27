@@ -57,20 +57,29 @@ class HomeController extends Controller
     {
         $pkg = ['s3', 's5', 'm3', 'm5'];
         if (in_array(strtolower($page), $pkg)) {
+            $nav_item = Page::where('position', '=', 1)->where('status', '=', 1)->get();
+            $footer_item = Page::where('position', '=', 2)->where('status', '=', 1)->get();
 
+            $data = compact(
+                'page',
+                'nav_item',
+                'footer_item'
+            );
+
+            return view('client.content.reg', $data);
+        } else {
+            $page = Page::where('short_tag', '=', $page)->first();
+            $nav_item = Page::where('position', '=', 1)->where('status', '=', 1)->get();
+            $footer_item = Page::where('position', '=', 2)->where('status', '=', 1)->get();
+
+            $data = compact(
+                'page',
+                'nav_item',
+                'footer_item'
+            );
+
+            return view('client.content.page', $data);
         }
-
-        $page = Page::where('short_tag', '=', $page)->first();
-        $nav_item = Page::where('position', '=', 1)->where('status', '=', 1)->get();
-        $footer_item = Page::where('position', '=', 2)->where('status', '=', 1)->get();
-
-        $data = compact(
-            'page',
-            'nav_item',
-            'footer_item'
-        );
-
-        return view('client.content.page', $data);
     }
 
     public function showHeader(Request $request) {
