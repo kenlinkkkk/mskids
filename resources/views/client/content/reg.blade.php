@@ -1,6 +1,6 @@
 @extends('client.index')
 @section('title')
-    <title>Gói {{ $page }}</title>
+    <title>Gói {{ strtoupper($page) }}</title>
 @endsection
 
 @section('content')
@@ -30,8 +30,15 @@
                         <div class="col-sm-12 col-md-4">
                             <div class="pricing-table highlight">
                                 <div class=pricing-plan>
-                                    <h3 class=h3-xs>{{ $page }}</h3>
+                                    <h3 class=h3-xs>{{ strtoupper($page) }}</h3>
+                                    <span class=price>{{ $pkg_info[$page][0] }}</span>
+                                    <sup>VNĐ</sup>
                                 </div>
+                                <ul class=features>
+                                    <li><i class="fas fa-stop-circle"></i> {{ $pkg_info[$page][1] }}</li>
+                                    <li><i class="fas fa-stop-circle"></i> Miễn phí 7 ngày</li>
+                                    <li><i class="fas fa-stop-circle"></i> Thời gian sử dụng {{ $pkg_info[$page][2] }}</li>
+                                </ul>
                                 <div class="table-footer">
                                     <form action="{{ route('home.reg') }}" method="post">
                                         @csrf

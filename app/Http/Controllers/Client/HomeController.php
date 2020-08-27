@@ -56,6 +56,12 @@ class HomeController extends Controller
     public function viewPage(Request $request, $page)
     {
         $pkg = ['s3', 's5', 'm3', 'm5'];
+        $pkg_info = [
+            's3' => ['30.000', '3 thiết bị', '1 tháng'],
+            's5' => ['40.000', '5 thiết bị', '1 tháng'],
+            'm3' => ['300.000', '3 thiết bị', '1 năm'],
+            'm5' => ['400.000', '5 thiết bị', '1 năm'],
+        ];
         if (in_array(strtolower($page), $pkg)) {
             $nav_item = Page::where('position', '=', 1)->where('status', '=', 1)->get();
             $footer_item = Page::where('position', '=', 2)->where('status', '=', 1)->get();
@@ -63,7 +69,8 @@ class HomeController extends Controller
             $data = compact(
                 'page',
                 'nav_item',
-                'footer_item'
+                'footer_item',
+                'pkg_info'
             );
 
             return view('client.content.reg', $data);
