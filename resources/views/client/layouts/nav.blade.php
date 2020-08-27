@@ -8,7 +8,7 @@
             <a href="{{ route('home.index') }}" class="navbar-brand logo-white"><img src="{{ asset('assets/client/images/logo-sk.png') }}" width="150" alt=header-logo></a>
             <div id=navbarSupportedContent class="collapse navbar-collapse">
                 <ul class="navbar-nav">
-                    @if (session()->get('_user')['msisdn'] != 'empty')
+                    @if (!empty(session()->get('_user')) && session()->get('_user')['msisdn'] != 'empty')
                         <li class="nav-item nl-simple"><a href="#" class="nav-link text-left">Xin chào: 0{{ substr(substr(session()->get('_user')['msisdn'], -9),0 , 5) }}xxxx</a></li>
                     @endif
                     <li class="nav-item nl-simple"><a class="nav-link text-left" href="{{ route('home.index') }}">Trang chủ</a></li>

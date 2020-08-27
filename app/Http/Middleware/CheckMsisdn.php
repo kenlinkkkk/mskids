@@ -22,22 +22,20 @@ class CheckMsisdn
 
         if (empty($user['msisdn'])) {
             $headers = $request->header();
-
             if (empty($headers['msisdn'])) {
-
                 if (!empty($_SERVER['HTTP_MSISDN'])) {
                     Log::info('LOG::Middleware::HTTP_MSISDN::' . $_SERVER['HTTP_MSISDN']);
                     session()->put('_user', ['msisdn' => $_SERVER['HTTP_MSISDN']]);
-                } else {
-                    return Redirect::away($link);
                 }
+//                else {
+//                    return Redirect::away($link);
+//                }
             } else {
                 $msisdn = $headers['msisdn'][0];
                 Log::info('LOG::Middleware::request_header::' . $msisdn);
                 session()->put('_user', ['msisdn' => $msisdn]);
             }
-        } else {
-            return $next($request);
         }
+        return $next($request);
     }
 }

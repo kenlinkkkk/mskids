@@ -53,13 +53,14 @@ Route::middleware('auth')->group(function (){
 
 Auth::routes();
 
-Route::middleware('checksub')->group(function () {
+//Route::middleware('checksub')->group(function () {
     Route::prefix('/')->name('home.')->group(function () {
         Route::get('/', 'Client\HomeController@index')->name('index');
         Route::get('/goi-dich-vu', 'Client\HomeController@showRegPage')->name('regPage');
 
         Route::post('/reg', 'Client\HomeController@regPackage')->name('reg');
     });
-});
+//});
+
 Route::get('/404', 'Client\HomeController@viewErrorPage')->name('error');
 Route::get('/{page}', 'Client\HomeController@viewPage')->name('viewPage');

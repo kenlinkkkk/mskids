@@ -55,6 +55,11 @@ class HomeController extends Controller
 
     public function viewPage(Request $request, $page)
     {
+        $pkg = ['s3', 's5', 'm3', 'm5'];
+        if (in_array(strtolower($page), $pkg)) {
+
+        }
+
         $page = Page::where('short_tag', '=', $page)->first();
         $nav_item = Page::where('position', '=', 1)->where('status', '=', 1)->get();
         $footer_item = Page::where('position', '=', 2)->where('status', '=', 1)->get();
@@ -89,7 +94,7 @@ class HomeController extends Controller
     public function redirectUrl(Request $request)
     {
         Log::info('LOG::redirectUrl::MSISDN');
-        $content = $request->get('link');
+        $content = html_entity_decode( $request->get('link'));
 
         if (empty($content)) {
             session()->put('_user', ['msisdn' => 'empty']);

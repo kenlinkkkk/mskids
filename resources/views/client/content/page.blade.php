@@ -9,7 +9,9 @@
             <div class=row>
                 <div class="col-md-10 col-lg-8 offset-md-1 offset-lg-2">
                     <div class="hero-txt text-center white-color">
-                        <h3 class=h3-xl>{{ $page->name }}</h3>
+                        @if(!empty($page->name))
+                            <h3 class=h3-xl>{{ $page->name }}</h3>
+                        @endif
                     </div>
                 </div>
             </div>
@@ -18,7 +20,9 @@
 
     <section class="wide-60 pricing-page-section" id=pricing-2>
         <div class=container>
-            {!! $page->content !!}
+            @if (!empty($page->content))
+                {!! $page->content !!}
+            @endif
         </div>
     </section>
 @endsection
