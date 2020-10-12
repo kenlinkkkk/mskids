@@ -40,6 +40,7 @@
     @yield('content')
 
     @include('client.layouts.footer')
+    <a id="scrollUp" href="#top" title="" style="position: fixed; z-index: 2147483647; display: inline;"></a>
 </div>
 <script src="{{ asset('assets/client/js/jquery-3.3.1.min.js') }}"></script>
 <script src="{{ asset('assets/client/js/jquery-migrate-3.0.0.min.js') }}"></script>

@@ -16,16 +16,13 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/back', 'Client\HomeController@redirectUrl')->name('backHome');
-Route::get('/header', 'Client\HomeController@showHeader')->name('showHeader');
-
 Auth::routes();
 
-Route::middleware('auth')->group(function (){
+//Route::middleware('auth')->group(function (){
     Route::prefix('/admin')->name('admin.')->group(function () {
-        Route::get('/profile', 'Admin\UserController@index')->name('profile');
-
-        Route::post('/change-password', 'Admin\UserController@changePassword')->name('changePassword');
+//        Route::get('/profile', 'Admin\UserController@index')->name('profile');
+//
+//        Route::post('/change-password', 'Admin\UserController@changePassword')->name('changePassword');
 
         Route::prefix('/page')->name('page.')->group(function () {
             Route::get('/', 'Admin\PageController@index')->name('index');
@@ -49,18 +46,20 @@ Route::middleware('auth')->group(function (){
                 Route::post('/delete/{category_id}', 'Admin\CategoryController@delete')->name('delete');
             });
     });
-});
+//});
 
 Auth::routes();
 
-//Route::middleware('checksub')->group(function () {
+Route::middleware('checksub')->group(function () {
     Route::prefix('/')->name('home.')->group(function () {
         Route::get('/', 'Client\HomeController@index')->name('index');
         Route::get('/goi-dich-vu', 'Client\HomeController@showRegPage')->name('regPage');
 
         Route::post('/reg', 'Client\HomeController@regPackage')->name('reg');
     });
-//});
+});
 
+Route::get('/back', 'Client\HomeController@redirectUrl')->name('backHome');
+Route::get('/header', 'Client\HomeController@showHeader')->name('showHeader');
 Route::get('/404', 'Client\HomeController@viewErrorPage')->name('error');
 Route::get('/{page}', 'Client\HomeController@viewPage')->name('viewPage');

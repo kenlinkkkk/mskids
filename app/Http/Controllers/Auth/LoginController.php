@@ -7,6 +7,8 @@ use App\Http\Requests\Auth\LoginRequest;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Redirect;
 
 class LoginController extends Controller
 {
@@ -52,16 +54,18 @@ class LoginController extends Controller
         $data = $request->except('_token');
 
         if (Auth::attempt($data)) {
-            return redirect(route('admin.profile'));
+            Log::info('LOG::Login::SUCCESS');
+            return redirect()->route('admin.profile');
         } else {
             $request->session()->flash('login-errors');
-            return redirect(route('login'));
+            Log::info('LOG::Login::FAILED');
+            return redirect()->route('login');
         }
     }
 
     public function logout(Request $request)
     {
         $this->performLogout($request);
-        return redirect(route('login'));
+        return redirect()->route('login');
     }
 }

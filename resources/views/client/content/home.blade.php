@@ -4,7 +4,7 @@
 @endsection
 
 @section('content')
-    <section id="hero-3" class="bg-scroll hero-section division">
+    <section id=hero-3 class="bg-scroll hero-section division">
         <div class=container>
             <div class="row d-flex align-items-center">
                 <div class="col-md-6 col-lg-5">

@@ -75,7 +75,7 @@ class HomeController extends Controller
 
             return view('client.content.reg', $data);
         } else {
-            $page = Page::where('short_tag', '=', $page)->first();
+            $page = Page::where('short_tag', '=', $page)->where('status', '=', 1)->first();
             $nav_item = Page::where('position', '=', 1)->where('status', '=', 1)->get();
             $footer_item = Page::where('position', '=', 2)->where('status', '=', 1)->get();
 
@@ -115,12 +115,12 @@ class HomeController extends Controller
         if (empty($content)) {
             session()->put('_user', ['msisdn' => 'empty']);
             Log::info('LOG::redirectUrl::session-msisdn: '. session()->get('_user')['msisdn']);
-            return Redirect::route('home.index');
         } else {
             session()->put('_user', ['msisdn' => aes128Decrypt('GuUgo9rJiCROAYc8', $content)]);
             Log::info('LOG::redirectUrl::session-msisdn: '. session()->get('_user')['msisdn']);
-            return Redirect::route('home.index');
         }
+
+        return Redirect::route('home.index');
     }
 
     public function regPackage(Request $request)
@@ -152,7 +152,6 @@ class HomeController extends Controller
         $public_url = 'http://cskh.mskids.vn/csp-api/v1/main/check_subs/';
         $private_url = 'http://10.54.14.137:8080/csp-api/v1/main/check_subs/';
         $msisdn = session()->get('_user')['msisdn'];
-//        $msisdn = '973299154';
         $ch = curl_init();
         $type == 'public'? $url = $public_url : $url = $private_url;
         curl_setopt($ch, CURLOPT_URL, $url);
@@ -170,7 +169,6 @@ class HomeController extends Controller
         curl_close ($ch);
 
         // further processing ....
-
         return $data;
     }
 }
