@@ -18,11 +18,11 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-//Route::middleware('auth')->group(function (){
+Route::middleware('auth')->group(function (){
     Route::prefix('/admin')->name('admin.')->group(function () {
-//        Route::get('/profile', 'Admin\UserController@index')->name('profile');
-//
-//        Route::post('/change-password', 'Admin\UserController@changePassword')->name('changePassword');
+        Route::get('/profile', 'Admin\UserController@index')->name('profile');
+
+        Route::post('/change-password', 'Admin\UserController@changePassword')->name('changePassword');
 
         Route::prefix('/page')->name('page.')->group(function () {
             Route::get('/', 'Admin\PageController@index')->name('index');
@@ -46,9 +46,11 @@ Auth::routes();
                 Route::post('/delete/{category_id}', 'Admin\CategoryController@delete')->name('delete');
             });
     });
-//});
+});
 
-Auth::routes();
+Route::get('/back', 'Client\HomeController@redirectUrl')->name('backHome');
+Route::get('/header', 'Client\HomeController@showHeader')->name('showHeader');
+Route::get('/404', 'Client\HomeController@viewErrorPage')->name('error');
 
 Route::middleware('checksub')->group(function () {
     Route::prefix('/')->name('home.')->group(function () {
@@ -59,7 +61,5 @@ Route::middleware('checksub')->group(function () {
     });
 });
 
-Route::get('/back', 'Client\HomeController@redirectUrl')->name('backHome');
-Route::get('/header', 'Client\HomeController@showHeader')->name('showHeader');
-Route::get('/404', 'Client\HomeController@viewErrorPage')->name('error');
+
 Route::get('/{page}', 'Client\HomeController@viewPage')->name('viewPage');

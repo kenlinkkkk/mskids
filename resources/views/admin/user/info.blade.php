@@ -88,10 +88,16 @@
                         <div class="form-group">
                             <label>Mật khẩu mới</label>
                             <input type="password" class="form-control" name="password_new">
+                            @if ($errors->has('password_new'))
+                                <b class="text-danger">{{ $errors->first('password_new') }}</b>
+                            @endif
                         </div>
                         <div class="form-group">
                             <label>Xác nhận mật khẩu mới</label>
                             <input type="password" class="form-control" name="password_confirm">
+                            @if ($errors->has('password_confirm'))
+                                <b class="text-danger">{{ $errors->first('password_confirm') }}</b>
+                            @endif
                         </div>
 
                         <div class="form-group d-flex justify-content-end">

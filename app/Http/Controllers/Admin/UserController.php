@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Admin\PasswordRequest;
 use App\Models\User;
 use App\Repositories\Admin\UserEloquentRepository;
 use Illuminate\Http\Request;
@@ -26,7 +27,7 @@ class UserController extends Controller
         return view('admin.user.info', $data);
     }
 
-    public function changePassword(Request $request)
+    public function changePassword(PasswordRequest $request)
     {
         $user = Auth::user();
 
