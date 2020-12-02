@@ -134,6 +134,17 @@ class HomeController extends Controller
 
     }
 
+    public function showProfile()
+    {
+        $nav_item = Page::where('position', '=', 1)->where('status', '=', 1)->get();
+        $footer_item = Page::where('position', '=', 2)->where('status', '=', 1)->get();
+        $data = compact(
+            'nav_item',
+            'footer_item'
+        );
+        return view('client.content.profile', $data);
+    }
+
     private function checkSub($type) {
         $public_url = 'http://cskh.mskids.vn/csp-api/v1/main/check_subs/';
         $private_url = 'http://10.54.14.137:8080/csp-api/v1/main/check_subs/';
