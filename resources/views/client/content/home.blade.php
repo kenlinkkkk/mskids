@@ -13,7 +13,7 @@
                         <p class=p-md>Dịch vụ giám sát trẻ em  Mobifone Safe Kids</p>
                         <p class=p-md>Ứng dụng giúp phụ huynh giúp định vi, quản lý giới hạn các ứng dụng và website  có thể truy cập, quản lý thòi gian truy cập và cho phép gọi khẩn cấp khi cần thiết</p>
                         <div class=stores-badge>
-                            <a href=# class=store>
+                            <a href="https://apps.apple.com/us/app/mobifone-global-safekids/id1533642275" class=store>
                                 <img class=appstore-original src="{{ asset('assets/client/images/store_badges/appstore.png') }}" alt=appstore-logo/>
                             </a>
                             <a href="https://play.google.com/store/apps/details?id=com.mskids.me" class=store>
@@ -133,7 +133,7 @@
                                             <form action="{{ route('home.reg') }}" method="post">
                                                 @csrf
                                                 <input type="hidden" name="package" value="S3">
-                                                <button type="submit" class="btn btn-tra-grey black-hover">Đăng ký ngay</button>
+                                                <button type="submit" class="btn btn-tra-grey black-hover">Mua dịch vụ</button>
                                             </form>
                                         </div>
                                     @endif
@@ -165,7 +165,7 @@
                                             <form action="{{ route('home.reg') }}" method="post">
                                                 @csrf
                                                 <input type="hidden" name="package" value="S5">
-                                                <button type="submit" class="btn btn-tra-grey black-hover">Đăng ký ngay</button>
+                                                <button type="submit" class="btn btn-tra-grey black-hover">Mua dịch vụ</button>
                                             </form>
                                         </div>
                                     @endif
@@ -197,7 +197,7 @@
                                             <form action="{{ route('home.reg') }}" method="post">
                                                 @csrf
                                                 <input type="hidden" name="package" value="M3">
-                                                <button type="submit" class="btn btn-tra-grey black-hover">Đăng ký ngay</button>
+                                                <button type="submit" class="btn btn-tra-grey black-hover">Mua dịch vụ</button>
                                             </form>
                                         </div>
                                     @endif
@@ -229,7 +229,7 @@
                                             <form action="{{ route('home.reg') }}" method="post">
                                                 @csrf
                                                 <input type="hidden" name="package" value="M5">
-                                                <button type="submit" class="btn btn-tra-grey black-hover">Đăng ký ngay</button>
+                                                <button type="submit" class="btn btn-tra-grey black-hover">Mua dịch vụ</button>
                                             </form>
                                         </div>
                                     @endif
@@ -251,7 +251,7 @@
                             <h3 class=h3-lg>Bảo vệ con trẻ với  Safe Kids</h3>
                             <p class=p-md></p>
                             <div class=stores-badge>
-                                <a href=# class=store>
+                                <a href="https://apps.apple.com/us/app/mobifone-global-safekids/id1533642275" class=store>
                                     <img class=appstore-white src="{{ asset('assets/client/images/store_badges/appstore-tra-white.png') }}" alt=appstore-logo>
                                 </a>
                                 <a href="https://play.google.com/store/apps/details?id=com.mskids.me" class=store>

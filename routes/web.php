@@ -50,7 +50,6 @@ Route::middleware('auth')->group(function (){
 
 Route::get('/back', 'Client\HomeController@redirectUrl')->name('backHome');
 Route::get('/header', 'Client\HomeController@showHeader')->name('showHeader');
-Route::get('/404', 'Client\HomeController@viewErrorPage')->name('error');
 
 Route::middleware('checksub')->group(function () {
     Route::prefix('/')->name('home.')->group(function () {

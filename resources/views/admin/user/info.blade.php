@@ -89,14 +89,14 @@
                             <label>Mật khẩu mới</label>
                             <input type="password" class="form-control" name="password_new">
                             @if ($errors->has('password_new'))
-                                <b class="text-danger">{{ $errors->first('password_new') }}</b>
+                                <i class="text-danger">{{ $errors->first('password_new') }}</i>
                             @endif
                         </div>
                         <div class="form-group">
                             <label>Xác nhận mật khẩu mới</label>
                             <input type="password" class="form-control" name="password_confirm">
                             @if ($errors->has('password_confirm'))
-                                <b class="text-danger">{{ $errors->first('password_confirm') }}</b>
+                                <i class="text-danger">{{ $errors->first('password_confirm') }}</i>
                             @endif
                         </div>
 

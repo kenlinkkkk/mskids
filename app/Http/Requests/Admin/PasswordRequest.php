@@ -24,14 +24,17 @@ class PasswordRequest extends FormRequest
     public function rules()
     {
         return [
-            'password_new' => 'required|
-                                min:8|
-                                regex:/^.*(?=.{3,})(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[\d\X])(?=.*[!$#%]).*$/',
-            'password_confirm' => 'required|
-                                min:8|
-                                regex:/^.*(?=.{3,})(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[\d\X])(?=.*[!$#%]).*$/|
-                                same:password_new'
-
+            'password_new' => [
+                'required',
+                'min:8',
+                'regex:/^.*(?=.{3,})(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[\d\X])(?=.*[!@$#%]).*$/i'
+            ],
+            'password_confirm' => [
+                'required',
+                'min:8',
+                'regex:/^.*(?=.{3,})(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[\d\X])(?=.*[!@$#%]).*$/i',
+                'same:password_new'
+            ]
         ];
     }
 

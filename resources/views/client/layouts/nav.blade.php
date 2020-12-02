@@ -9,7 +9,7 @@
             <div id=navbarSupportedContent class="collapse navbar-collapse">
                 <ul class="navbar-nav">
                     @if (!empty(session()->get('_user')) && session()->get('_user')['msisdn'] != 'empty')
-                        <li class="nav-item nl-simple"><a href="#" class="nav-link text-left">Xin chào: 0{{ substr(substr(session()->get('_user')['msisdn'], -9),0 , 5) }}xxxx</a></li>
+                        <li class="nav-item nl-simple"><a href="https://my.mskids.vn/" class="nav-link text-left">Xin chào: 0{{ substr(substr(session()->get('_user')['msisdn'], -9),0 , 5) }}xxxx</a></li>
                     @endif
                     <li class="nav-item nl-simple"><a class="nav-link text-left" href="{{ route('home.index') }}">Trang chủ</a></li>
                     <li class="nav-item nl-simple"><a class="nav-link text-left" href=#hero-3>Giới thiệu</a></li>
@@ -21,7 +21,7 @@
                     @endif
                 </ul>
                 <span class="navbar-text white-color">
-                    <a href="{{ route('home.regPage') }}" class="btn btn-tra-white primary-color-hover">Đăng ký ngay</a>
+                    <a href="{{ route('home.regPage') }}" class="btn btn-tra-white primary-color-hover">Mua dịch vụ</a>
                 </span>
             </div>
         </div>
