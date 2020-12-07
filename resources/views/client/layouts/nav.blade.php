@@ -8,17 +8,18 @@
             <a href="{{ route('home.index') }}" class="navbar-brand logo-white"><img src="{{ asset('assets/client/images/logo-sk.png') }}" width="150" alt=header-logo></a>
             <div id=navbarSupportedContent class="collapse navbar-collapse">
                 <ul class="navbar-nav">
-{{--                    @if (!empty(session()->get('_user')) && session()->get('_user')['msisdn'] != 'empty')--}}
+                    @if (!empty(session()->get('_user')) && session()->get('_user')['msisdn'] != 'empty')
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Xin chào: 0{{ substr(substr(session()->get('_user')['msisdn'], -9),0 , 5) }}xxxx
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ route('home.profile') }}">Thay đổi thông tin cá nhân</a>
-                            <a class="dropdown-item" href="https://my.mskids.vn/">Đổi mật khẩu</a>
+                            <a class="dropdown-item" href="https://my.mskids.vn/user">Thay đổi thông tin cá nhân</a>
+                            <a class="dropdown-item" href="{{ route('home.logs') }}">Trạng thái tài khoản</a>
+                            <a class="dropdown-item" href="https://my.mskids.vn/user/pin">Đổi mật khẩu</a>
                         </div>
                     </li>
-{{--                    @endif--}}
+                    @endif
                     <li class="nav-item nl-simple"><a class="nav-link text-left" href="{{ route('home.index') }}">Trang chủ</a></li>
                     <li class="nav-item nl-simple"><a class="nav-link text-left" href=#hero-3>Giới thiệu</a></li>
                     <li class="nav-item nl-simple"><a class="nav-link text-left" href=#footer-2>Về chúng tôi</a></li>

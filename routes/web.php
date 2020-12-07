@@ -51,15 +51,16 @@ Route::middleware('auth')->group(function (){
 Route::get('/back', 'Client\HomeController@redirectUrl')->name('backHome');
 Route::get('/header', 'Client\HomeController@showHeader')->name('showHeader');
 
-//Route::middleware('checksub')->group(function () {
+Route::middleware('checksub')->group(function () {
     Route::prefix('/')->name('home.')->group(function () {
         Route::get('/', 'Client\HomeController@index')->name('index');
         Route::get('/goi-dich-vu', 'Client\HomeController@showRegPage')->name('regPage');
         Route::get('/ca-nhan', 'Client\HomeController@showProfile')->name('profile');
+        Route::get('/lich-su-tai-khoan', 'Client\HomeController@showLogAction')->name('logs');
 
         Route::post('/reg', 'Client\HomeController@regPackage')->name('reg');
     });
-//});
+});
 
 
 Route::get('/{page}', 'Client\HomeController@viewPage')->name('viewPage');

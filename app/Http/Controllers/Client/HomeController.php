@@ -145,10 +145,53 @@ class HomeController extends Controller
         return view('client.content.profile', $data);
     }
 
+    public function showLogAction()
+    {
+        $nav_item = Page::where('position', '=', 1)->where('status', '=', 1)->get();
+        $footer_item = Page::where('position', '=', 2)->where('status', '=', 1)->get();
+//        $logs_action = $this->checkLogAction('private');
+        $logs_action = $this->checkSub('private');
+        $data = compact(
+            'nav_item',
+            'footer_item',
+            'logs_action'
+        );
+        return view('client.content.log_action', $data);
+    }
+
     private function checkSub($type) {
         $public_url = 'http://cskh.mskids.vn/csp-api/v1/main/check_subs/';
         $private_url = 'http://10.54.14.137:8080/csp-api/v1/main/check_subs/';
         $msisdn = session()->get('_user')['msisdn'];
+        $ch = curl_init();
+        $type == 'public'? $url = $public_url : $url = $private_url;
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS,"p=". $msisdn);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/x-www-form-urlencoded'));
+
+
+        // receive server response ...
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+        $response = curl_exec ($ch);
+
+        $data = json_decode($response, true);
+        curl_close ($ch);
+
+        // further processing ....
+        return $data;
+    }
+
+    private function checkLogAction($type) {
+        $public_url = 'http://cskh.mskids.vn/csp-api/v1/main/get_history_subs/';
+        $private_url = 'http://10.54.14.137:8080/csp-api/v1/main/get_history_subs/';
+        if ($type == 'public') {
+            $msisdn = '0906271003';
+        } else {
+            $msisdn = session()->get('_user')['msisdn'];
+        }
+
         $ch = curl_init();
         $type == 'public'? $url = $public_url : $url = $private_url;
         curl_setopt($ch, CURLOPT_URL, $url);
