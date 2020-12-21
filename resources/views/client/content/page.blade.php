@@ -4,7 +4,7 @@
 @endsection
 
 @section('content')
-    <section class="page-hero-section division" id=pricing-page style="background-image: url('{{ $page->picture == '' ? asset('assets\client\images\newsletter-1.jpg') : asset($page->picture) }}')">
+    <section class="page-hero-section division" id=pricing-page style="background-image: url('{{ $page->picture == '' ? asset('assets/client/images/newsletter-1.jpg') : asset($page->picture) }}')">
         <div class=container>
             <div class=row>
                 <div class="col-md-10 col-lg-8 offset-md-1 offset-lg-2">

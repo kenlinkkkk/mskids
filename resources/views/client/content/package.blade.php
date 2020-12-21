@@ -40,18 +40,18 @@
                                     <li><i class="fas fa-stop-circle"></i> Thời gian sử dụng 1 tháng</li>
                                 </ul>
                                 @if(session()->get('_user')['msisdn'] != 'empty')
-                                    @if($package['data']['packageCode'] == 'S3')
-                                        @if ($package['data']['status'] == 1)
+                                    @if ($package['data']['status'] == 1)
+                                        @if ($package['data']['packageCode'] == 'S3')
                                             <a href="#" class="btn btn-tra-grey black-hover disabled">Gói đang sử dụng</a>
-                                        @else
-                                            <div class="table-footer">
-                                                <form action="{{ route('home.reg') }}" method="post">
-                                                    @csrf
-                                                    <input type="hidden" name="package" value="S3">
-                                                    <button type="submit" class="btn btn-tra-grey black-hover">Mua dịch vụ</button>
-                                                </form>
-                                            </div>
                                         @endif
+                                    @else
+                                        <div class="table-footer">
+                                            <form action="{{ route('home.reg') }}" method="post">
+                                                @csrf
+                                                <input type="hidden" name="package" value="S3">
+                                                <button type="submit" class="btn btn-tra-grey black-hover">Mua dịch vụ</button>
+                                            </form>
+                                        </div>
                                     @endif
                                 @endif
                             </div>
@@ -70,18 +70,18 @@
                                     <li><i class="fas fa-stop-circle"></i> Thời gian sử dụng 1 tháng</li>
                                 </ul>
                                 @if(session()->get('_user')['msisdn'] != 'empty')
-                                    @if($package['data']['packageCode'] == 'S5')
-                                        @if ($package['data']['status'] == 1)
+                                    @if ($package['data']['status'] == 1)
+                                        @if ($package['data']['packageCode'] == 'S5')
                                             <a href="#" class="btn btn-tra-grey black-hover disabled">Gói đang sử dụng</a>
-                                        @else
-                                            <div class="table-footer">
-                                                <form action="{{ route('home.reg') }}" method="post">
-                                                    @csrf
-                                                    <input type="hidden" name="package" value="S5">
-                                                    <button type="submit" class="btn btn-tra-grey black-hover">Mua dịch vụ</button>
-                                                </form>
-                                            </div>
                                         @endif
+                                    @else
+                                        <div class="table-footer">
+                                            <form action="{{ route('home.reg') }}" method="post">
+                                                @csrf
+                                                <input type="hidden" name="package" value="S5">
+                                                <button type="submit" class="btn btn-tra-grey black-hover">Mua dịch vụ</button>
+                                            </form>
+                                        </div>
                                     @endif
                                 @endif
                             </div>
@@ -100,18 +100,18 @@
                                     <li><i class="fas fa-stop-circle"></i> Thời gian sử dụng 1 năm</li>
                                 </ul>
                                 @if(session()->get('_user')['msisdn'] != 'empty')
-                                    @if($package['data']['packageCode'] == 'M3')
-                                        @if ($package['data']['status'] == 1)
+                                    @if ($package['data']['status'] == 1)
+                                        @if ($package['data']['packageCode'] == 'M3')
                                             <a href="#" class="btn btn-tra-grey black-hover disabled">Gói đang sử dụng</a>
-                                        @else
-                                            <div class="table-footer">
-                                                <form action="{{ route('home.reg') }}" method="post">
-                                                    @csrf
-                                                    <input type="hidden" name="package" value="M3">
-                                                    <button type="submit" class="btn btn-tra-grey black-hover">Mua dịch vụ</button>
-                                                </form>
-                                            </div>
                                         @endif
+                                    @else
+                                        <div class="table-footer">
+                                            <form action="{{ route('home.reg') }}" method="post">
+                                                @csrf
+                                                <input type="hidden" name="package" value="M3">
+                                                <button type="submit" class="btn btn-tra-grey black-hover">Mua dịch vụ</button>
+                                            </form>
+                                        </div>
                                     @endif
                                 @endif
                             </div>
@@ -130,18 +130,18 @@
                                     <li><i class="fas fa-stop-circle"></i> Thời gian sử dụng 1 năm</li>
                                 </ul>
                                 @if(session()->get('_user')['msisdn'] != 'empty')
-                                    @if($package['data']['packageCode'] == 'M5')
-                                        @if ($package['data']['status'] == 1)
+                                    @if ($package['data']['status'] == 1)
+                                        @if ($package['data']['packageCode'] == 'M5')
                                             <a href="#" class="btn btn-tra-grey black-hover disabled">Gói đang sử dụng</a>
-                                        @else
-                                            <div class="table-footer">
-                                                <form action="{{ route('home.reg') }}" method="post">
-                                                    @csrf
-                                                    <input type="hidden" name="package" value="M5">
-                                                    <button type="submit" class="btn btn-tra-grey black-hover">Mua dịch vụ</button>
-                                                </form>
-                                            </div>
                                         @endif
+                                    @else
+                                        <div class="table-footer">
+                                            <form action="{{ route('home.reg') }}" method="post">
+                                                @csrf
+                                                <input type="hidden" name="package" value="M5">
+                                                <button type="submit" class="btn btn-tra-grey black-hover">Mua dịch vụ</button>
+                                            </form>
+                                        </div>
                                     @endif
                                 @endif
                             </div>
@@ -152,7 +152,7 @@
             <div class=row>
                 <div class="col-lg-10 offset-lg-1 section-title">
                     <h3 class=h3-lg>Hướng dẫn sử dụng dịch vụ</h3>
-                    <p class="p-md">Đầu số dịch vụ: 9337</p>
+                    <h4 class="h4-lg">Đầu số dịch vụ: 9337</h4>
                 </div>
                 <div class="table-responsive">
                     <table class="table table-bordered">

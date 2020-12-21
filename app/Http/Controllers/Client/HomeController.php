@@ -95,8 +95,8 @@ class HomeController extends Controller
 
     public function redirectUrl(Request $request)
     {
-        Log::info('LOG::redirectUrl::MSISDN');
         $content = html_entity_decode($request->get('link'));
+        Log::info('LOG::redirectUrl::MSISDN::link='. $content);
 
         if (empty($content)) {
             session()->put('_user', ['msisdn' => 'empty']);

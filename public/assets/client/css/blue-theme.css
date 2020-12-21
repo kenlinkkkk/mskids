@@ -715,7 +715,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     color: #222;
-    font-family: 'Noto Sans TC', sans-serif;
+    /*font-family: 'Noto Sans TC', sans-serif;*/
     font-weight: 700;
     letter-spacing: -0.5px
 }
@@ -891,7 +891,7 @@ ul.content-list li:last-child {
 .btn {
     background-color: transparent;
     color: #fff;
-    font-family: 'Noto Sans TC', sans-serif;
+    /*font-family: 'Noto Sans TC', sans-serif;*/
     font-size: .865rem;
     line-height: 1;
     font-weight: 600;
@@ -1562,7 +1562,7 @@ p.play-btn-txt {
 
 span.section-id {
     font-size: .825rem;
-    font-family: 'Noto Sans TC', sans-serif;
+    /*font-family: 'Noto Sans TC', sans-serif;*/
     font-weight: 700;
     text-transform: uppercase;
     display: block;
@@ -1957,10 +1957,10 @@ span.id-color {
 
 .navbar-expand-md .navbar-nav .nav-link {
     font-size: .925rem;
-    font-family: 'Noto Sans TC', sans-serif;
+    /*font-family: 'Noto Sans TC', sans-serif;*/
     font-weight: 500;
     letter-spacing: 0;
-    padding: 9px 20px;
+    padding: 9px 12px;
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
     border-radius: 6px
@@ -2581,7 +2581,7 @@ span.id-color {
 .sending-msg .loading {
     color: #16a2e0;
     font-size: 15px;
-    font-family: 'Noto Sans TC', sans-serif;
+    /*font-family: 'Noto Sans TC', sans-serif;*/
     font-weight: 700
 }
 
@@ -3150,7 +3150,7 @@ span.id-color {
 }
 
 .statistic-block p {
-    font-family: 'Noto Sans TC', sans-serif;
+    /*font-family: 'Noto Sans TC', sans-serif;*/
     margin-bottom: 0
 }
 
@@ -3396,7 +3396,7 @@ span.id-color {
 }
 
 .pricing-table span.price {
-    font-family: 'Noto Sans TC', sans-serif;
+    /*font-family: 'Noto Sans TC', sans-serif;*/
     font-size: 28px;
     line-height: 70px;
     font-weight: 500;
@@ -3527,7 +3527,7 @@ ul.features li.disabled-option, .primary-theme ul.features li.disabled-option i,
 .team-member-data a {
     color: #666;
     font-size: .85rem;
-    font-family: 'Noto Sans TC', sans-serif;
+    /*font-family: 'Noto Sans TC', sans-serif;*/
     line-height: 1;
     font-weight: 500
 }
@@ -3968,7 +3968,7 @@ ul.features li.disabled-option, .primary-theme ul.features li.disabled-option i,
 }
 
 .blog-post-txt a {
-    font-family: 'Noto Sans TC', sans-serif;
+    /*font-family: 'Noto Sans TC', sans-serif;*/
     font-size: 1.05rem;
     line-height: 1.65;
     font-weight: 500;
@@ -3993,7 +3993,7 @@ ul.features li.disabled-option, .primary-theme ul.features li.disabled-option i,
 p.post-meta {
     color: #888;
     font-size: .9rem;
-    font-family: 'Noto Sans TC', sans-serif;
+    /*font-family: 'Noto Sans TC', sans-serif;*/
     margin-bottom: 8px
 }
 
@@ -4101,7 +4101,7 @@ p.post-meta span {
 
 .post-category p {
     color: #fff;
-    font-family: 'Noto Sans TC', sans-serif;
+    /*font-family: 'Noto Sans TC', sans-serif;*/
     font-size: .7rem;
     line-height: 1;
     font-weight: 700;
@@ -4270,7 +4270,7 @@ ul.blog-category-list li a:hover {
 
 .single-post-data p {
     font-size: .95rem;
-    font-family: 'Noto Sans TC', sans-serif
+    /*font-family: 'Noto Sans TC', sans-serif*/
 }
 
 .single-post-data a {
@@ -5133,7 +5133,7 @@ p.footer-copyright span {
 p.nb-form-title {
     color: #666;
     font-size: 15px;
-    font-family: 'Noto Sans TC', sans-serif;
+    /*font-family: 'Noto Sans TC', sans-serif;*/
     line-height: 1;
     margin-bottom: 0;
     padding: 20px 20px 0
@@ -5266,7 +5266,7 @@ p.nb-form-title {
 .breadcrumb-item a {
     color: #fff;
     font-size: 1rem;
-    font-family: 'Noto Sans TC', sans-serif;
+    /*font-family: 'Noto Sans TC', sans-serif;*/
     font-weight: 500;
     text-decoration: underline
 }
@@ -5278,7 +5278,7 @@ p.nb-form-title {
 .breadcrumb-item.active {
     color: #fff;
     font-size: 1rem;
-    font-family: 'Noto Sans TC', sans-serif;
+    /*font-family: 'Noto Sans TC', sans-serif;*/
     font-weight: 500
 }
 
@@ -5348,7 +5348,7 @@ p.nb-form-title {
 }
 
 #terms-page p.p-notice {
-    font-family: 'Noto Sans TC', sans-serif;
+    /*font-family: 'Noto Sans TC', sans-serif;*/
     font-weight: 700
 }
 
@@ -5439,7 +5439,7 @@ nav a#pull {
     position: fixed;
     z-index: 9999;
     font-size: 13px;
-    font-family: 'Noto Sans TC', sans-serif;
+    /*font-family: 'Noto Sans TC', sans-serif;*/
     overflow: hidden;
     right: -230px;
     top: 125px;
@@ -5506,7 +5506,7 @@ nav a#pull {
 #stlChanger p {
     color: #444;
     font-size: 15px;
-    font-family: 'Noto Sans TC', sans-serif;
+    /*font-family: 'Noto Sans TC', sans-serif;*/
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: -0.5px;

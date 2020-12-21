@@ -33,9 +33,9 @@
                         </thead>
                         <tbody>
                         <tr>
-                            <td>{{ $log_action['data']['packageCode'] }}</td>
-                            <td>{{ $log_action['data']['activeTime'] }}</td>
-                            <td>{{ $log_action['data']['expireTime'] }}</td>
+                            <td>{{ $logs_action['data']['packageCode'] }}</td>
+                            <td>{{ $logs_action['data']['activeTime'] }}</td>
+                            <td>{{ $logs_action['data']['expireTime'] }}</td>
                         </tr>
                         </tbody>
                     </table>
