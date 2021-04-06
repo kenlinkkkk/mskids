@@ -27,11 +27,11 @@ class CheckMsisdn
                 $msisdn = $headers['msisdn'][0];
                 Log::info('LOG::Middleware::request_header::' . $msisdn);
                 session()->put('_user', ['msisdn' => $msisdn]);
-
             } elseif (!empty($_SERVER['HTTP_MSISDN'])) {
                 Log::info('LOG::Middleware::HTTP_MSISDN::' . $_SERVER['HTTP_MSISDN']);
                 session()->put('_user', ['msisdn' => $_SERVER['HTTP_MSISDN']]);
-            } else {
+            }
+            else {
                 return Redirect::away($link);
             }
         } else {

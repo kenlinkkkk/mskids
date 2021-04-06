@@ -52,4 +52,14 @@ class UserController extends Controller
             return redirect(route('admin.profile'));
         }
     }
+
+    public function upload(Request $request)
+    {
+        $file=$request->file('file');
+        $path= url('/uploads/post').'/'.$file->getClientOriginalName();
+        $imgpath=$file->move(public_path('/uploads/post/'),$file->getClientOriginalName());
+        $fileNameToStore= $path;
+
+        return json_encode(['location' => $fileNameToStore]);
+    }
 }

@@ -25,6 +25,17 @@
     <link href="{{ asset('assets/client/css/animate.css') }}" rel=stylesheet>
     <link href="{{ asset('assets/client/css/blue-theme.css') }}" rel=stylesheet>
     <link href="{{ asset('assets/client/css/responsive.css') }}" rel=stylesheet>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-191380903-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-191380903-1');
+    </script>
+
 </head>
 <body>
 <div id=loader-wrapper>
