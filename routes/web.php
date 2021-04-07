@@ -61,5 +61,5 @@ Route::middleware('checksub')->group(function () {
     });
 });
 
-
+Route::get('/ung-dung', 'Client\HomeController@download')->name('download');
 Route::get('/{page}', 'Client\HomeController@viewPage')->name('viewPage');
