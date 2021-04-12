@@ -21,6 +21,7 @@
             <div class=row>
                 <div class="col-lg-10 offset-lg-1 section-title">
                     <h3 class=h3-lg>Các gói dịch vụ</h3>
+                    <h4 class="text-center">Chọn số dòng bạn muốn bảo vệ và sau đó làm theo hướng dẫn để sử dụng dịch vụ</h4>
                 </div>
             </div>
             <div class=tab-content>
@@ -153,6 +154,11 @@
                 <div class="col-lg-10 offset-lg-1 section-title">
                     <h3 class=h3-lg>Hướng dẫn sử dụng dịch vụ</h3>
                     <h4 class="h4-lg">Đầu số dịch vụ: 9337</h4>
+                    <ul class="custom-ul">
+                        <li><span>1</span> Chọn sản phẩm bạn muốn</li>
+                        <li><span>2</span> Gửi tin nhắn SMS với mã tương ứng đến 9337</li>
+                        <li style="color: #1c6ca1"><span>3</span> Tận hưởng dịch vụ!</li>
+                    </ul>
                 </div>
                 <div class="table-responsive">
                     <table class="table table-bordered">
@@ -209,6 +215,26 @@
             </div>
         </div>
     </section>
+@endsection
+
+@section('style')
+<style>
+    .custom-ul {
+        font-size: 1.2rem;
+        line-height: 2.5rem;
+    }
+
+    .custom-ul span {
+        font-weight: bold;
+        color: white;
+        background-color: #1c6ca1;
+        border: 1px solid #1c6ca1;
+        padding: 2px 5px;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+    }
+</style>
 @endsection
 
 @section('script')

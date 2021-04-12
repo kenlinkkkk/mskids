@@ -103,6 +103,7 @@
             <div class=row>
                 <div class="col-lg-10 offset-lg-1 section-title">
                     <h3 class=h3-lg>Các gói dịch vụ</h3>
+                    <h4 class="text-center">Chọn số dòng bạn muốn bảo vệ và sau đó làm theo hướng dẫn để sử dụng dịch vụ</h4>
                 </div>
             </div>
             <div class=tab-content>

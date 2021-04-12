@@ -25,6 +25,7 @@
     <link href="{{ asset('assets/client/css/animate.css') }}" rel=stylesheet>
     <link href="{{ asset('assets/client/css/blue-theme.css') }}" rel=stylesheet>
     <link href="{{ asset('assets/client/css/responsive.css') }}" rel=stylesheet>
+    @yield('style')
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-191380903-1"></script>
