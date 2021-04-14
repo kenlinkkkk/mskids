@@ -55,11 +55,35 @@ class UserController extends Controller
 
     public function upload(Request $request)
     {
-        $file=$request->file('file');
-        $path= url('/uploads/post').'/'.$file->getClientOriginalName();
-        $imgpath=$file->move(public_path('/uploads/post/'),$file->getClientOriginalName());
-        $fileNameToStore= $path;
+        if ($request->file('file')) {
+            $file=$request->file('file');
+            $path= url('/uploads/post').'/'.$file->getClientOriginalName();
+            $imgpath=$file->move(public_path('/uploads/post/'),$file->getClientOriginalName());
 
-        return json_encode(['location' => $fileNameToStore]);
+            $fileNameToStore= $path;
+
+            return json_encode(['location' => $fileNameToStore]);
+        } else {
+            $data = $request->except('_token');
+            $contentBase64 = $data['base64Data'];
+            $content = base64_decode($contentBase64, true);
+            $fp = file_put_contents(public_path('/uploads/post/'. $data['title']), $content);
+            return response()->json('/uploads/post/'. $data['title']);
+        }
+    }
+
+    public function decode_chunk( $data ) {
+        $data = explode( ';base64,', $data );
+
+        if ( ! is_array( $data ) || ! isset( $data[1] ) ) {
+            return false;
+        }
+
+        $data = base64_decode( $data[1] );
+        if ( ! $data ) {
+            return false;
+        }
+
+        return $data;
     }
 }
